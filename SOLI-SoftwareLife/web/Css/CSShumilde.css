@@ -1,17 +1,8 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 07/04/2021, 04:39:57 PM
-    Author     : leone
-*/
-
 body{
     text-align: center;
     background-color: rgb(37, 37, 37);
     color: white;
+    font-family: 'Brush Script MT', cursive;
 }
 
 #timer{
@@ -22,6 +13,10 @@ body{
     padding-right: 2%;
     padding-left: 2%;
     margin-right: 25%;   
+}
+
+.btn{
+    border-color: black;
 }
 
 #btn1, #btn2{
