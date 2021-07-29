@@ -19,7 +19,7 @@
     
     <%
         //int dif = Integer.parseInt(request.getParameter("dificultad"));
-        int _preguntaActual=1;
+        int _preguntaActual=1, siguiente=0;
         String _nivel="", _tipo="";
         /*
         if(dif==1){
@@ -33,54 +33,73 @@
     %>
     
     <p id="mod">Prueba - Nivel: <%=_nivel%></p><hr>
-    <h3 id="timer"></h3>
     
     <%
         Preguntas p = new Preguntas();
-        List<Preguntas> pr = p.BuscarPreguntas(1);
-        for(Preguntas pregunta: pr){
-            if(pregunta.getTipo()==1){
+        List<Preguntas> P = p.BuscarPreguntas(1);
+        for(Preguntas pr: P){
+            if(pr.getTipo()==1){
                 _tipo="Cierto Y Falso";
             } else {
                 _tipo="Mejor Respuesta";
             }
+           
     %>
+    
+    <h3 id="timer"></h3>
     
     <h2 id="num"><b><u>Pregunta #<%=_preguntaActual%></u></b></h2>
     <h2><b><u>Tipo :<%=_tipo%></u></b></h2>
-    <h1 id="preg"><%=pregunta.getEnunciado()%></h1>
+    <h1 id="preg"><%=pr.getEnunciado()%></h1>
 
     <div>
         <input type="button"
-        value="<%=pregunta.getrCorrecta()%>"
+        value="<%=pr.getrCorrecta()%>"
         class="btn" id="btn1">
         <input type="button"
-        value="<%=pregunta.getrIncorrecta1()%>"
+        value="<%=pr.getrIncorrecta1()%>"
         class="btn" id="btn2">
     </div>
 
         <%
-            if(pregunta.getTipo()!=1){
+            if(pr.getTipo()!=1){
         %>
         
     <div>
         <input type="button"
-        value="<%=pregunta.getrIncorrecta2()%>"
+        value="<%=pr.getrIncorrecta2()%>"
         class="btn" id="btn3">
         <input type="button"
-        value="<%=pregunta.getrIncorrecta3()%>"
+        value="<%=pr.getrIncorrecta3()%>"
         class="btn" id="btn4">
     </div>
     
-    <%      }     
-        }
-    %>
-
-    <input type="button" onclick="location.href='Jugar_Preguntas.html'"
+    <%      }      %>
+    
+    <input type="button" onclick=""
     value="Siguiente Pregunta"
     class="btn btn5" id="sig" disabled>
     
+    <head><meta http-equiv="Refresh" content=" ;"></head>
+    
+    <%
+        
+        if(siguiente>0){
+            Thread.sleep(5000);
+        }
+        _preguntaActual++;
+        siguiente++;
+        
+      }
+        
+    %>    
+    
 </body>
+
+<script>
+    
+    
+</script>
 
 <script type="text/javascript">
     var count = 11;

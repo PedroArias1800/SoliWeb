@@ -172,7 +172,7 @@ public class Preguntas {
         List<Preguntas> p = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = " SELECT * FROM cvid_pregunta WHERE nivel='"+nivel+"' ORDER BY rand() limit '"+cant+"'";
+            String query = " SELECT * FROM cvid_pregunta WHERE nivel='"+nivel+"' ORDER BY rand() limit "+cant;
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Preguntas P = new Preguntas();
@@ -196,18 +196,8 @@ public class Preguntas {
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        P.setID_pregunta(0);
-        P.setEnunciado(null);
-        P.setrCorrecta(null);
-        P.setrIncorrecta1(null);
-        P.setrIncorrecta2(null);
-        P.setrIncorrecta3(null);
-        P.setRetroalimentacion(null);
-        P.setTipo(0);
-        P.setNivel(0);
-        p.add(P);
         
-        return p;
+        return null;
     } 
     
 }
