@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/30/2021, 11:36:36 AM
+    Author     : leone
+*/
+
+html{
+
+font-size: 62.5%;
+
+box-sizing: border-box;
+
+}
+
+*, *:before, *:after {
+
+    box-sizing: inherit;
+
+}
+
+*{
+    font-family: 'Krub', sans-serif;
+    text-align: center;
+}
+
+.Titulo{
+    font-size: 5.5em;
+}
+
+span{
+    font-size: 1em;
+    letter-spacing: 10px;
+}
+
+.Login{
+    font-size: 3em;
+}
+
+.IniSec{
+    padding: 0.5rem;
+    width: 25%;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+}
+
+.Botones{
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    border: 2px solid black;
+    transition: font-size .2s ease;
+    font-weight: 700;
+}
+
+.Botones:hover{
+    cursor: pointer;
+    font-size: 2.1rem;
+}
+
+.BtnEs{
+    position: inherit;
+    left: 0;
+}
+
+.Especial{
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.Opc2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 1.2%;
+    margin-bottom: 4.5rem;
+}
+
+.Ini{
+    margin-bottom: 2rem;
+}
+
+.utp{
+    border-radius: 8.5rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.Fondo{
+    background-repeat: no-repeat;
+    background-size: 101% 112%;
+}
+
+.FondoEspecial{
+    background-repeat: no-repeat;
+    background-size: 101% 112%;
+}
+
+.Texto{
+    text-align: center;
+    font-size: 3rem;
+}

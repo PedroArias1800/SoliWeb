@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>SOLI - Software Life</title>    <!-- Titulo De La Página Del Navegador -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/LoginPrincipal.css"/>
+        <!--<link rel="stylesheet" href="../Css/CSShumilde.css">-->
+        <link rel="stylesheet" href="../Css/ModoClaro.css">
+        <!--<link rel="stylesheet" href="../Css/ModoOscuro.css">-->
+    </head>
+    <body class="Fondo">
+        <header>    <!-- Encabezado -->
+            <h1 class="Titulo"><span>SOLI</span><br>Software Life</h1>
+            <h2 class="Login">Recuperar Contraseña</h2>
+        </header>
+        <div>
+            <form action="../Controles/C_Login.jsp" method="post">  <!-- Obtener Datos Para El Inicio De Sesión -->
+                <p class="Texto">
+                    Ingresa el correo electrónico y el nombre de usuario que usaste para registrarte en<br><strong>SoLi - Software Life</strong>
+                    para recibir un enlace de <strong>Restauración De Contraseña</strong>.
+                </p>
+                <input type="email" placeholder="Correo" class="IniSec" name="Nombre" required/>
+                <input type="text" placeholder="Nombre De Usuario" class="IniSec" name="Correo" required><br>
+                <input type="hidden" value="0" name="vengoDe"><br>
+                <input type="submit" class="Botones Ini" value="Enviar Solicitud"><br>
+                <a href="P_Login.html"><input class="Botones Regresar" type="button" value="Regresar"></a><!-- comment -->
+            </form>
+        </div><br><br>
+        <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+            <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.jpg" alt="" width="150" height="150"></a>
+            <a href="https://fisc.utp.ac.pa/"><img src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+        </footer>
+    </body>
+</html> 

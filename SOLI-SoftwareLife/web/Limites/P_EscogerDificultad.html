@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Escoge La Dificultad</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../Css/LoginPrincipal.css"/>
+        <!--<link rel="stylesheet" href="../Css/CSShumilde.css">-->
+        <link rel="stylesheet" href="../Css/ModoClaro.css"/>
+        <!--<link rel="stylesheet" href="../Css/LoginMenuPrincipal.css"/>-->
+    </head>
+    <body class="Fondo">
+        <header>    <!-- Encabezado -->
+            <h1 class="Titulo">SOLI<br>Software Life</h1>
+            <h2 class="Login">Escoger Dificultad</h2>
+        </header>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmn_UlurMU5fnFh9XAXPtedgVUNEn1CebwKA&usqp=CAU" alt="" width="600" height="250">
+            <p> Texto de prueba para la descripción rápida del módulo</p>
+            <div>
+                <input type="button" name="facil" value="Fácil" onclick="mBotonesAvan()" id="btn-1">
+                <input type="button" name="medio" value="Medio" onclick="mBotonesAvan()" id="btn-2">
+                <input type="button" name="dificil" value="Difícil" onclick="mBotonesAvan()" id="btn-3">
+                <div style="display: none;" id="btn-4-5">
+                    <input class="Botones" type="button" value="Atrás" onclick="mBotonesDif()">
+                    <form action="../Controles/Jugar De Aurelio" method="post">
+                        <input class="Botones" type="hidden" value="" name="dificultad">
+                        <input class="Botones" type="submit" value="Empezar Prueba">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+            <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
+            <a href="https://fisc.utp.ac.pa/"><img src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+        </footer>
+        <script>
+            var btn1 = getElementById('btn-1');
+            var btn2 = getElementById('btn-2');
+            var btn3 = getElementById('btn-3');
+            var btn45 = getElementById('btn-4-5');
+            
+            function mBotonesAvan(){
+                btn1.style.display = 'none';
+                btn2.style.display = 'none';
+                btn3.style.display = 'none';
+                btn45.style.display = 'block';
+            }
+            
+            function mBotonesDif(){
+                btn1.style.display = 'inline';
+                btn2.style.display = 'inline';
+                btn3.style.display = 'inline';
+                btn45.style.display = 'none';
+            }
+        </script>
+        <!--<script language="JavaScript" src="../JavaScript/Listeners.js" type="text/javascript"></script>-->
+    </body>
+</html>

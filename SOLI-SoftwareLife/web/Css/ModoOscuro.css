@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/05/2021, 07:40:19 AM
+    Author     : leone
+*/
+
+body{
+    text-align: center;
+    color: white;
+}
+
+.Titulo{
+    font-size: 5.5em;
+    text-shadow: 0.1em 0.1em 0.4em #ff1b1f;
+    color: white;
+}
+
+.Botones{    
+    background-color: #ff1b1f;
+    color: white;
+}
+
+.Botones:hover{
+    background-color: #ff491b;
+}
+
+.Fondo{
+    background-image: url('../Imagenes/FondoModoOscuro.jpg');
+}
