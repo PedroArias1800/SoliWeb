@@ -4,9 +4,8 @@
  * and open the template in the editor.
  */
 
-
 function vermas(id){
-    if(id=="mas"){
+    if(id==="mas"){
         document.getElementById("desplegar").style.display="block";
         document.getElementById("mas").style.display="none";
     }
