@@ -31,7 +31,7 @@ and open the template in the editor.
                 <div style="display: none;" id="btn-4-5">
                     <input class="Botones" type="button" value="Atrás" id="btn-4">
                     <form action="../Limites/P_Jugar.jsp" method="post">
-                        <input class="Botones" type="hidden" value="" name="dificultad">
+                        <input class="Botones" type="hidden" value="" name="dificultad" id="diff">
                         <input class="Botones" type="submit" value="Empezar Prueba">
                     </form>
                 </div>
@@ -45,8 +45,14 @@ and open the template in the editor.
             $('#btn-2').toggle();
             $('#btn-3').toggle();
             $('#btn-4-5').toggle();
-             }));
+            }));
             })
+
+            $(function() {
+            $('#btn-1, #btn-2, #btn-3').on('click', function() {
+	        document.getElementById('diff').value = this.value;
+            });
+            });
         </script>
         
         <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
