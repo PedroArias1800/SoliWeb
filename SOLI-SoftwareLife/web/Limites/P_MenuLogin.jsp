@@ -46,7 +46,14 @@
             if(IDUsuario==3){ 
         %>
         <h1> 
-            <a href="P_Jugar.jsp"><input class="Botones Especial" type="button" value="Jugar"></a><br>
+            <form action="../Controles/C_TodasLasP.jsp">
+                <% 
+                   session.setAttribute("iniciar", 1); 
+                   session.setAttribute("prA", 0);
+                   session.setAttribute("nivel", 1);
+                %>
+                <input class="Botones Especial" type="submit" value="Jugar"><br>
+            </form>
             <a href="P_Ranking.jsp"><input class="Botones Especial" type="button" value="Ranking"></a><br>
             <a href="P_AcercaDe.html"><input class="Botones Especial" type="button" value="Acerca De"></a><br>
             <a href=""><input class="Botones Especial" type="button" value="Infografía"></a>

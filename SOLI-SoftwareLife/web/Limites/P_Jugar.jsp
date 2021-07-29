@@ -18,46 +18,116 @@
 <body>
     
     <%
-        //int dif = Integer.parseInt(request.getParameter("dificultad"));
-        int _preguntaActual=1, siguiente=0;
-        String _nivel="", _tipo="";
-        /*
+        int dif = (int)session.getAttribute("nivel");
+        String _nivel="", _tipo="", enviar="";
+        int dimension=0;
+        
         if(dif==1){
             _nivel="Fácil";
         } else if (dif==2){
             _nivel="Medio";
         } else {
             _nivel="Difícil";
-        }*/
+        }
         
     %>
     
     <p id="mod">Prueba - Nivel: <%=_nivel%></p><hr>
     
     <%
-        Preguntas p = new Preguntas();
-        List<Preguntas> P = p.BuscarPreguntas(1);
-        for(Preguntas pr: P){
+        List<Preguntas> PreguntaActual = (List<Preguntas>)session.getAttribute("PreguntaActual");
+        
+        for(Preguntas pr: PreguntaActual){
             if(pr.getTipo()==1){
                 _tipo="Cierto Y Falso";
+                dimension = 2;
             } else {
                 _tipo="Mejor Respuesta";
+                dimension = 4;
             }
+            
+        String generarRespuestas [] = new String[dimension];
+        int generarPuntos[] = new int[dimension];
+            
+        int numPregunta = (int)session.getAttribute("iniciar");
+        
+        if(pr.getTipo()!=1){
+        
+            int cantidad = dimension;
+            int index = 0;
+            int [] aleatorios = new int [cantidad];
+            while(index < cantidad) {   
+                int propuesto = (int)(Math.random()*cantidad);
+                boolean repetido = false;
+                while(!repetido) {
+                    for(int i=0; i<index; i++) {
+                        if(propuesto == aleatorios[i]) {
+                            repetido = true;
+                            break;
+                        }
+                    }
+                    if(!repetido) {
+                        if(propuesto==0){
+                            generarRespuestas[index] = pr.getrCorrecta();
+                            generarPuntos[index] = 5;
+                        } else if(propuesto==1){
+                            generarRespuestas[index] = pr.getrIncorrecta1();
+                            generarPuntos[index] = 0;
+                        } else if(propuesto==2){
+                            generarRespuestas[index] = pr.getrIncorrecta2();
+                            generarPuntos[index] = 0;
+                        } else {
+                            generarRespuestas[index] = pr.getrIncorrecta3();
+                            generarPuntos[index] = 0;
+                        }
+                        aleatorios[index] = propuesto;
+                        index++;
+                    }
+                }
+            }
+        }   else{
+            int cantidad = dimension;
+            int index = 0;
+            int [] aleatorios = new int [cantidad];
+            while(index < cantidad) {   
+                int propuesto = (int)(Math.random()*cantidad);
+                boolean repetido = false;
+                while(!repetido) {
+                    for(int i=0; i<index; i++) {
+                        if(propuesto == aleatorios[i]) {
+                            repetido = true;
+                            break;
+                        }
+                    }
+                    if(!repetido) {
+                        if(propuesto==0){
+                            generarRespuestas[index] = pr.getrCorrecta();
+                            generarPuntos[index] = 5;
+                        } else {
+                            generarRespuestas[index] = pr.getrIncorrecta3();
+                            generarPuntos[index] = 5;
+                        }
+                        aleatorios[index] = propuesto;
+                        index++;
+                    }
+                }
+            }
+        }
            
     %>
     
     <h3 id="timer"></h3>
     
-    <h2 id="num"><b><u>Pregunta #<%=_preguntaActual%></u></b></h2>
+    <h2 id="num"><b><u>Pregunta #<%=numPregunta%></u></b></h2>
     <h2><b><u>Tipo :<%=_tipo%></u></b></h2>
     <h1 id="preg"><%=pr.getEnunciado()%></h1>
 
     <div>
         <input type="button"
-        value="<%=pr.getrCorrecta()%>"
+        value="<%=generarRespuestas[0]%>"
         class="btn" id="btn1">
         <input type="button"
-        value="<%=pr.getrIncorrecta1()%>"
+        value="<%=generarRespuestas[1]%>"
         class="btn" id="btn2">
     </div>
 
@@ -67,42 +137,45 @@
         
     <div>
         <input type="button"
-        value="<%=pr.getrIncorrecta2()%>"
+        value="<%=generarRespuestas[2]%>"
         class="btn" id="btn3">
         <input type="button"
-        value="<%=pr.getrIncorrecta3()%>"
+        value="<%=generarRespuestas[3]%>"
         class="btn" id="btn4">
     </div>
     
-    <%      }      %>
+    <%      }      
     
-    <input type="button" onclick=""
-    value="Siguiente Pregunta"
-    class="btn btn5" id="sig" disabled>
-    
-    <head><meta http-equiv="Refresh" content=" ;"></head>
-    
-    <%
-        
-        if(siguiente>0){
-            Thread.sleep(5000);
+        if(numPregunta==10){
+            enviar = "P_Retroalimentacion.jsp";
+        } else {
+            enviar = "../Controles/C_Jugar.jsp";
         }
-        _preguntaActual++;
-        siguiente++;
+    
+    %>
+    
+    <form action="<%=enviar%>">
+        <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
+    </form>
+    
+    <%  
+        session.removeAttribute("PreguntaActual");  
         
-      }
+        numPregunta=numPregunta+1;
+        session.removeAttribute("iniciar");
+        session.setAttribute("iniciar", numPregunta);
         
-    %>    
+        }  
+    %>   
     
 </body>
 
-<script>
-    
-    
-</script>
+<SCRIPT LANGUAGE="JavaScript">
+history.forward()
+</SCRIPT>
 
 <script type="text/javascript">
-    var count = 11;
+    var count = 3;
 
     setInterval(function(){
         count--;

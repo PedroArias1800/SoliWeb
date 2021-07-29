@@ -139,34 +139,25 @@ public class Puntaje {
             String query = "CALL PuntajeEstudiante('"+ID_estudiante+"')";
             ResultSet result = stmt.executeQuery(query);
             if(result.next()){
-                P.setID_estudiante(result.getString("ID_estudiante"));/*
-                P.setEnunciado(result.getString("Enunciado"));
-                P.setrCorrecta(result.getString("rCorrecta"));
-                P.setrIncorrecta1(result.getString("rIncorrecta1"));
-                P.setrIncorrecta2(result.getString("rIncorrecta2"));
-                P.setrIncorrecta3(result.getString("rIncorrecta3"));
-                P.setRetroalimentacion(result.getString("Retroalimentacion"));
-                P.setTipo(result.getInt("tipo"));
-                P.setNivel(result.getInt("nivel"));
-                */
+                P.setID_estudiante(result.getString("ID_estudiante"));
+                P.setExperienciaAvance(result.getInt("experienciaAvance"));
+                P.setIntentoFacil(result.getInt("intentoFacil"));
+                P.setIntentoMedio(result.getInt("intentoMedio"));
+                P.setIntentoDificil(result.getInt("intentoDificil"));
+                P.setTotal_p_correcta(result.getInt("total_p_correcta"));
+                P.setTotal_p_incorrecta(result.getInt("total_p_incorrecta"));
                 p.add(P);
-                return(p);
             } 
+            result.close();
+            stmt.close();
+            
+            return p;
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
-        }/*
-        P.setID_pregunta(0);
-        P.setEnunciado(null);
-        P.setrCorrecta(null);
-        P.setrIncorrecta1(null);
-        P.setrIncorrecta2(null);
-        P.setrIncorrecta3(null);
-        P.setRetroalimentacion(null);
-        P.setTipo(0);
-        P.setNivel(0);
-        p.add(P);*/
+        }
         
-        return p;
+        return null;
     } 
+    
 }

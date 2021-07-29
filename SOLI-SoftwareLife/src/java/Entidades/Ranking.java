@@ -104,8 +104,8 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, r.puntos FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id=1 ORDER BY puntos DESC";
+            String query = "SELECT r.estudiante, u.firstname, u.lastname, MAX(r.puntos) as pun FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
+            query += "WHERE r.nivel_id=1 GROUP BY r.estudiante ORDER BY pun DESC";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();
@@ -132,8 +132,8 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, r.puntos FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id='"+n+"' ORDER BY puntos DESC";
+            String query = "SELECT r.estudiante, u.firstname, u.lastname, MAX(r.puntos) as pun FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
+            query += "WHERE r.nivel_id='"+n+"' GROUP BY r.estudiante ORDER BY pun DESC";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();
@@ -156,5 +156,22 @@ public class Ranking {
        
         return(null);
     }
+    
+    public boolean RegistrarIntento(String Cedula, int nivel, int puntos, int intF, int intM, int intD, int tpc, int tpi) throws SQLException{
+        try{
+            int r;
+            Statement stmt = cn.createStatement();
+            String query = "CALL ActualizarPuntaje('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+intF+"', '"+intM+"', '"+intD+"', '"+tpc+"', '"+tpi+"')";
+            r = stmt.executeUpdate(query);
+            if(r>0){
+                return true;
+            }
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        
+        return false;
+    } 
     
 }
