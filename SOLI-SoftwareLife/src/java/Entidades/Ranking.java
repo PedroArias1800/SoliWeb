@@ -114,7 +114,6 @@ public class Ranking {
                 R.setNombre(result.getString("u.firstname"));
                 R.setApellido(result.getString("u.lastname"));
                 R.setPuntos(result.getInt("r.puntos"));
-                R.setPuntos(result.getInt("r.puntos"));
                 r.add(R);
             } 
            result.close();

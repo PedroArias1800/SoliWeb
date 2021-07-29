@@ -5,6 +5,7 @@
  */
 package Entidades;
 
+import Procesos.Conexion;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -155,7 +156,11 @@ public class Preguntas {
     private int Nivel;
     Connection cn;
     
-     public List<Preguntas> BuscarPreguntas(int nivel) throws SQLException{
+    public Preguntas(){
+        this.cn= new Conexion().OpenDb();
+    }
+    
+    public List<Preguntas> BuscarPreguntas(int nivel) throws SQLException{
         int cant;
         if(nivel==1){
             cant = 10;
