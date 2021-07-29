@@ -170,12 +170,12 @@ public class Preguntas {
             cant = 15;
         }
         List<Preguntas> p = new ArrayList<>();
-        Preguntas P = new Preguntas();
         try{   
             Statement stmt = cn.createStatement();
             String query = " SELECT * FROM cvid_pregunta WHERE nivel='"+nivel+"' ORDER BY rand() limit '"+cant+"'";
             ResultSet result = stmt.executeQuery(query);
-            if(result.next()){
+            while(result.next()){
+                Preguntas P = new Preguntas();
                 P.setID_pregunta(result.getInt("ID_pregunta"));
                 P.setEnunciado(result.getString("Enunciado"));
                 P.setrCorrecta(result.getString("rCorrecta"));
@@ -187,8 +187,11 @@ public class Preguntas {
                 P.setNivel(result.getInt("nivel"));
                 
                 p.add(P);
-                return(p);
             } 
+            result.close();
+            stmt.close();
+            
+            return(p);
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());

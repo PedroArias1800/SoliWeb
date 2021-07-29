@@ -1,34 +1,80 @@
+<%-- 
+    Document   : P_Jugar
+    Created on : 07/28/2021, 08:39:34 PM
+    Author     : leone
+--%>
+
+<%@page import="java.util.List"%>
+<%@page import="Entidades.Preguntas"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSShumilde.css">
-    <title>SOLI - Preguntas</title>
+    <title>SOLI - Jugar</title>
 </head>
 <body>
-    <p id="mod">Módulo #X - Nivel #X</p><hr>
+    
+    <%
+        //int dif = Integer.parseInt(request.getParameter("dificultad"));
+        int _preguntaActual=1;
+        String _nivel="", _tipo="";
+        /*
+        if(dif==1){
+            _nivel="Fácil";
+        } else if (dif==2){
+            _nivel="Medio";
+        } else {
+            _nivel="Difícil";
+        }*/
+        
+    %>
+    
+    <p id="mod">Prueba - Nivel: <%=_nivel%></p><hr>
     <h3 id="timer"></h3>
-    <h2 id="num"><b><u>Pregunta #X</u></b></h2>
-    <h1 id="preg">¿?</h1>
+    
+    <%
+        Preguntas p = new Preguntas();
+        List<Preguntas> pr = p.BuscarPreguntas(1);
+        for(Preguntas pregunta: pr){
+            if(pregunta.getTipo()==1){
+                _tipo="Cierto Y Falso";
+            } else {
+                _tipo="Mejor Respuesta";
+            }
+    %>
+    
+    <h2 id="num"><b><u>Pregunta #<%=_preguntaActual%></u></b></h2>
+    <h2><b><u>Tipo :<%=_tipo%></u></b></h2>
+    <h1 id="preg"><%=pregunta.getEnunciado()%></h1>
 
     <div>
         <input type="button"
-        value="Opción #1"
+        value="<%=pregunta.getrCorrecta()%>"
         class="btn" id="btn1">
         <input type="button"
-        value="Opción #2"
+        value="<%=pregunta.getrIncorrecta1()%>"
         class="btn" id="btn2">
     </div>
 
+        <%
+            if(pregunta.getTipo()!=1){
+        %>
+        
     <div>
         <input type="button"
-        value="Opción #3"
+        value="<%=pregunta.getrIncorrecta2()%>"
         class="btn" id="btn3">
         <input type="button"
-        value="Opción #4"
+        value="<%=pregunta.getrIncorrecta3()%>"
         class="btn" id="btn4">
     </div>
+    
+    <%      }     
+        }
+    %>
 
     <input type="button" onclick="location.href='Jugar_Preguntas.html'"
     value="Siguiente Pregunta"
