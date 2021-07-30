@@ -24,13 +24,13 @@ and open the template in the editor.
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmn_UlurMU5fnFh9XAXPtedgVUNEn1CebwKA&usqp=CAU" alt="" width="600" height="250">
             <p> Texto de prueba para la descripción rápida del módulo</p>
             <div>
-                <input type="button" name="facil" value="Fácil"  id="btn-1" >
-                <input type="button" name="medio" value="Medio"  id="btn-2" >
+                <input type="button" name="facil" value="Facil" id="btn-1" >
+                <input type="button" name="medio" value="Medio" id="btn-2" >
                 <input type="button" name="dificil" value="Difícil"  id="btn-3" >
                 <div style="display: none;" id="btn-4-5">
                     <input class="Botones" type="button" value="Atrás" id="btn-4">
-                    <form action="../Limites/P_Jugar.jsp" method="post">
-                        <input class="Botones" type="hidden" value="" name="dificultad" id="diff">
+                    <form action="../Controles/C_TodasLasP.jsp" method="post">
+                        <input class="Botones" type="hidden" value="" name="nivel" id="diff">
                         <input class="Botones" type="submit" value="Empezar Prueba">
                     </form>
                 </div>

@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSShumilde.css">
     <title>SOLI - Jugar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
     
@@ -29,6 +30,8 @@
         } else {
             _nivel="Difícil";
         }
+        
+        int puntos = (int)session.getAttribute("puntaje");
         
     %>
     
@@ -154,9 +157,73 @@
     
     %>
     
-    <form action="<%=enviar%>">
+    <h2 id="Retro" style="display: none;">Respuesta: <input type="text" id="corre" value="" >
+        La respuesta era <%=pr.getrCorrecta()%>
+    </h2>
+    
+    <input type="hidden" value="<%=puntos%>" id="puntos">
+    <input type="hidden" value="<%=pr.getrCorrecta()%>" id="resp">
+    
+    <form action="<%=enviar%>" method="post">
+        <input type="number" value="0" name="puntaje" id="pun">
         <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
     </form>
+        
+<script>
+            $(function(){
+            $('#btn1, #btn2').on('click', function(){
+            document.getElementById("sig").disabled = false;
+            document.getElementById("btn1").disabled = true;
+            document.getElementById("btn2").disabled = true;
+            
+            document.getElementById("Retro").style.display="block";
+            
+            });
+            })
+            
+            $(function() {
+            $('#btn1, #btn2').on('click', function() {
+                
+                var era = "Incorrecto";
+
+                if((this.value).equals(document.getElementById('resp').value)){
+                    era = "Correcta";
+                    document.getElementById('puntos').value = "5";  
+                }
+
+                    document.getElementById('puntos').value = "0";
+                    document.getElementById('corre').value = era;
+            });
+            });
+    
+            $(function(){
+            $('#btn1, #btn2, #btn3, #btn4').on('click', function(){
+            document.getElementById("sig").disabled = false;
+            document.getElementById("btn1").disabled = true;
+            document.getElementById("btn2").disabled = true;
+            document.getElementById("btn3").disabled = true;
+            document.getElementById("btn4").disabled = true;
+            
+            document.getElementById("Retro").style.display="block";
+            
+            });
+            })
+            
+            $(function() {
+            $('#btn1, #btn2, #btn3, #btn4').on('click', function() {
+                
+                var era = "Incorrecto";
+
+                if((this.value).equals(document.getElementById('resp').value)){
+                    era = "Correcta";
+                    document.getElementById('puntos').value = "5";  
+                }
+
+                    document.getElementById('puntos').value = "0";
+                    document.getElementById('corre').value = era;
+            });
+            });
+</script>
     
     <%  
         session.removeAttribute("PreguntaActual");  
@@ -169,10 +236,10 @@
     %>   
     
 </body>
-
-<SCRIPT LANGUAGE="JavaScript">
-history.forward()
-</SCRIPT>
+<!--
+<script LANGUAGE="JavaScript">
+    history.forward()
+</script>-->
 
 <script type="text/javascript">
     var count = 3;
@@ -201,6 +268,8 @@ history.forward()
             document.getElementById("btn2").disabled = true;
             document.getElementById("btn3").disabled = true;
             document.getElementById("btn4").disabled = true;
+            
+            document.getElementById("Retro").style.display="block";
         }
     }, 1000);
 

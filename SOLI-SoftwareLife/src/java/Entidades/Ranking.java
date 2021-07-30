@@ -104,8 +104,7 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, MAX(r.puntos) as pun FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id=1 GROUP BY r.estudiante ORDER BY pun DESC";
+            String query = "CALL MostrarRanking('1')";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();
@@ -113,7 +112,7 @@ public class Ranking {
                 R.setID_estudiante(result.getString("r.estudiante"));
                 R.setNombre(result.getString("u.firstname"));
                 R.setApellido(result.getString("u.lastname"));
-                R.setPuntos(result.getInt("r.puntos"));
+                R.setPuntos(result.getInt("pun"));
                 r.add(R);
             } 
            result.close();
@@ -132,8 +131,7 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, MAX(r.puntos) as pun FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id='"+n+"' GROUP BY r.estudiante ORDER BY pun DESC";
+            String query = "CALL MostrarRanking('"+n+"')";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();

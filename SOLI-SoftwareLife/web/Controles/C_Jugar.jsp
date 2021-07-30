@@ -17,6 +17,9 @@
     <body>
         <%
             int num = (int)session.getAttribute("iniciar");
+            int puntaje = Integer.parseInt(request.getParameter("puntaje"));
+            puntaje = puntaje + (int)session.getAttribute("puntaje");
+            
             int repetir = 0;
             
             List<Preguntas> Devolver = new ArrayList<>();
@@ -43,6 +46,8 @@
 
             Devolver.add(p);
             session.setAttribute("PreguntaActual", Devolver);
+            session.removeAttribute("puntaje");
+            session.setAttribute("puntaje", puntaje);
                 
         %>
         

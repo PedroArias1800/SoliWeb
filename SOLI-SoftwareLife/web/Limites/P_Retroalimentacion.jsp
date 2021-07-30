@@ -14,8 +14,9 @@
         <title>Retroalimentación</title>
     </head>
     <body>
-        
+            <h3>Retroalimentación</h3>
         <%
+            if((int)session.getAttribute("tipoUsuario")==3){
             Ranking r = new Ranking();
             Puntaje p = new Puntaje();
             
@@ -28,15 +29,22 @@
             int tpc = (int)session.getAttribute("tpc");
             int tpi = (int)session.getAttribute("tpi");
             
+            if()
+            
             boolean resultados = r.RegistrarIntento(cedula, nivel, puntos, intF, intM, intD, tpc, tpi);
             if(resultados){     %>
                 
+                <br><p>Estos son tus resultados del intento<br><br>
+                <h3>Puntos Obtenidos: <%=puntos%></h3>
+                <h3>Intento: <%=intE%></h3>
+                <h3></h3>
+                <h3></h3>
             
         <%
             }   else    {    %>
-                    <h3>Retroalimentación</h3>
-                    <br><p>Error Al Guardar Tus Resultados<br><br>
-                    Ah ocurrido un error al guardar en <strong>El Ranking</strong> :(</p><br><br><br>
+                    
+                <br><p>Error Al Guardar Tus Resultados<br><br>
+                Ah ocurrido un error al guardar en <strong>El Ranking</strong> :(</p><br><br><br>
         <%
             }
 
@@ -47,6 +55,10 @@
         session.removeAttribute("intD");
         session.removeAttribute("tpc");
         session.removeAttribute("tpi");
+
+        } else {    %>
+                
+        <%    }     %>
 
         %>
         
