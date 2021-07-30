@@ -157,7 +157,7 @@
     
     %>
     
-    <h2 id="Retro" style="display: none;">Respuesta: <input type="text" id="corre" value="" >
+    <h2 id="Retro" style="display: none;">Respuesta: <p id="corre" ></p>
         La respuesta era <%=pr.getrCorrecta()%>
     </h2>
     
@@ -165,11 +165,11 @@
     <input type="hidden" value="<%=pr.getrCorrecta()%>" id="resp">
     
     <form action="<%=enviar%>" method="post">
-        <input type="number" value="0" name="puntaje" id="pun">
+        <input type="text" name="puntaje" id="pun">
         <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
     </form>
         
-<script>
+<script >
             $(function(){
             $('#btn1, #btn2').on('click', function(){
             document.getElementById("sig").disabled = false;
@@ -179,20 +179,25 @@
             document.getElementById("Retro").style.display="block";
             
             });
-            })
+            });
             
             $(function() {
             $('#btn1, #btn2').on('click', function() {
                 
-                var era = "Incorrecto";
+                id = document.getElementById('corre');
+                var resp = document.getElementById('resp');
+                var uResp = this.getAttribute('value');
+                var era = 'Incorrecto';
 
-                if((this.value).equals(document.getElementById('resp').value)){
-                    era = "Correcta";
-                    document.getElementById('puntos').value = "5";  
+                if(uResp === resp.getAttribute('value')){
+                    era = 'Correcta';
+                    document.getElementById('pun').value = 5;
+                    id.innerHTML = era;
                 }
-
-                    document.getElementById('puntos').value = "0";
-                    document.getElementById('corre').value = era;
+                else{
+                    document.getElementById('pun').value = 0;
+                    id.innerHTML = era;
+                }
             });
             });
     
@@ -207,20 +212,25 @@
             document.getElementById("Retro").style.display="block";
             
             });
-            })
+            });
             
             $(function() {
             $('#btn1, #btn2, #btn3, #btn4').on('click', function() {
                 
-                var era = "Incorrecto";
+                id = document.getElementById('corre');
+                var resp = document.getElementById('resp');
+                var uResp = this.getAttribute('value');
+                let era = "Incorrecto";
 
-                if((this.value).equals(document.getElementById('resp').value)){
+                if(uResp === resp.getAttribute('value')){
                     era = "Correcta";
-                    document.getElementById('puntos').value = "5";  
+                    document.getElementById('pun').value = 5;
+                    id.innerHTML = era;
                 }
-
-                    document.getElementById('puntos').value = "0";
-                    document.getElementById('corre').value = era;
+                else{
+                    document.getElementById('pun').value = 0;
+                    id.innerHTML = era;
+                }
             });
             });
 </script>
@@ -242,7 +252,7 @@
 </script>-->
 
 <script type="text/javascript">
-    var count = 3;
+    var count = 10;
 
     setInterval(function(){
         count--;
