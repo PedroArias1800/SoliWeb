@@ -19,6 +19,22 @@
             int num = (int)session.getAttribute("iniciar");
             int puntaje = Integer.parseInt(request.getParameter("puntaje"));
             puntaje = puntaje + (int)session.getAttribute("puntaje");
+                
+            String continuar = request.getParameter("continuar");
+            
+            int tpc = (int)session.getAttribute("tpc");
+            int tpi = (int)session.getAttribute("tpi");
+            
+            session.removeAttribute("tpc");
+            session.removeAttribute("tpi");
+            
+            if(puntaje==5&&num!=1){
+                tpc = tpc + 1;
+            } else if(puntaje==0&&num!=1){
+                tpi = tpi + 1;
+            } else {
+                    
+            }
             
             int repetir = 0;
             
@@ -48,9 +64,20 @@
             session.setAttribute("PreguntaActual", Devolver);
             session.removeAttribute("puntaje");
             session.setAttribute("puntaje", puntaje);
-                
+            session.setAttribute("tpc", tpc);
+            session.setAttribute("tpi", tpi);
+            
+            if(continuar.equals("Si")){                
         %>
         
         <head><meta http-equiv="Refresh" content="0; URL=../Limites/P_Jugar.jsp"></head>
+        
+        <%
+            }  else  {
+        %>
+        
+        <head><meta http-equiv="Refresh" content="0; URL=../Limites/P_Retroalimentacion.jsp"></head>
+        
+        <%  }  %>
     </body>
 </html>

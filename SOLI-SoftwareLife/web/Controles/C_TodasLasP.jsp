@@ -29,11 +29,14 @@
             
             List<Preguntas> P = p.BuscarPreguntas(num);
             
+            session.setAttribute("tpc", 0);
+            session.setAttribute("tpi", 0);
             session.setAttribute("TodasLasP", P);
             session.setAttribute("nivel", num);
         %>
-        <form action="../Controles/C_Jugar.jsp" disabled>
+        <form action="../Controles/C_Jugar.jsp" style="display: none;">
             <input type="hidden" value="0" name="puntaje">
+            <input type="hidden" value="Si" name="continuar">
             <input type="submit" id="enviar" style="">
         </form>
         

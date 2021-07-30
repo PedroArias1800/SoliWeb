@@ -156,8 +156,9 @@ public class Puntaje {
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        
-        return null;
+        P.setID_estudiante(null);
+        p.add(P);
+        return p;
     } 
     
 }

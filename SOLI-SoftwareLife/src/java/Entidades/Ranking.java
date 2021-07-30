@@ -155,11 +155,17 @@ public class Ranking {
         return(null);
     }
     
-    public boolean RegistrarIntento(String Cedula, int nivel, int puntos, int intF, int intM, int intD, int tpc, int tpi) throws SQLException{
+    public boolean RegistrarIntento(String Cedula, int nivel, int puntos, int i1, int i2, int i3, int tpc, int tpi, int existe) throws SQLException{
         try{
             int r;
             Statement stmt = cn.createStatement();
-            String query = "CALL ActualizarPuntaje('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+intF+"', '"+intM+"', '"+intD+"', '"+tpc+"', '"+tpi+"')";
+            String query="";
+            if(existe==0){
+                query = "CALL InsertarPuntajeNuevo('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+i1+"', '"+i2+"', '"+i3+"', '"+tpc+"', '"+tpi+"')";
+            } else {
+                query = "CALL InsertarPuntaje('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+i1+"', '"+i2+"', '"+i3+"', '"+tpc+"', '"+tpi+"')";
+            }
+            
             r = stmt.executeUpdate(query);
             if(r>0){
                 return true;

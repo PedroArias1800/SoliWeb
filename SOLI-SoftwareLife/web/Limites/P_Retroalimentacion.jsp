@@ -4,6 +4,7 @@
     Author     : leone
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="Entidades.Puntaje"%>
 <%@page import="Entidades.Ranking"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -20,47 +21,66 @@
             Ranking r = new Ranking();
             Puntaje p = new Puntaje();
             
+            String _nivel="";
             String cedula = (String)session.getAttribute("ID_usuario");
+            
+            int porcentaje=0;
+            int exis=0, i1=0, i2=0, i3=0;
+            
             int nivel = (int)session.getAttribute("nivel");
-            int puntos = (int)session.getAttribute("puntos");
-            int intF = (int)session.getAttribute("intF");
-            int intM = (int)session.getAttribute("intM");
-            int intD = (int)session.getAttribute("intD");
+            int puntos = (int)session.getAttribute("puntaje");
             int tpc = (int)session.getAttribute("tpc");
             int tpi = (int)session.getAttribute("tpi");
             
-            if()
+            porcentaje=tpc*100/(tpc+tpi);
             
-            boolean resultados = r.RegistrarIntento(cedula, nivel, puntos, intF, intM, intD, tpc, tpi);
+            if(nivel==1){
+                _nivel="Fácil";
+                i1=1;
+            } else if (nivel==2){
+                _nivel="Medio";
+                i2=1;
+            } else {
+                _nivel="Difícil";
+                i3=3;
+            }
+            
+            List<Puntaje> puntaje = p.BuscarPuntaje(cedula);
+            for(Puntaje existe: puntaje){
+                exis = 1;
+            }
+
+            boolean resultados = r.RegistrarIntento(cedula, nivel, puntos, i1, i2, i3, tpc, tpi, exis);
+            
             if(resultados){     %>
                 
                 <br><p>Estos son tus resultados del intento<br><br>
                 <h3>Puntos Obtenidos: <%=puntos%></h3>
-                <h3>Intento: <%=intE%></h3>
-                <h3></h3>
-                <h3></h3>
+                <h3>Intento: Nivel <%=_nivel%></h3>
+                <h3>Respuestas Correctas: <%=tpc%></h3>
+                <h3>Respuestas Incorrectas: <%=tpi%></h3>
+                <h3>Porcentaje De Efectividad: <%=porcentaje%>%</h3>
             
         <%
             }   else    {    %>
                     
                 <br><p>Error Al Guardar Tus Resultados<br><br>
                 Ah ocurrido un error al guardar en <strong>El Ranking</strong> :(</p><br><br><br>
+                
         <%
             }
 
         session.removeAttribute("nivel");
-        session.removeAttribute("puntos");
-        session.removeAttribute("intF");
-        session.removeAttribute("intM");
-        session.removeAttribute("intD");
+        session.removeAttribute("puntaje");
         session.removeAttribute("tpc");
         session.removeAttribute("tpi");
 
-        } else {    %>
+        }   else {    %>
                 
-        <%    }     %>
-
-        %>
+                <br><p>Esperamos que haya verificado todos los datos de la prueba<br><br>
+                Sus resultados no se guardarán en <strong>El Ranking</strong> :)</p><br><br><br>
+        
+        <%  }     %>
         
         <form action="P_MenuLogin.jsp" method="post">
             <input type="submit" value="Volver Al Menú Principal">
