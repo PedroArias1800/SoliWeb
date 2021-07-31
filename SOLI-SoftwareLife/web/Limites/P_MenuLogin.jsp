@@ -61,82 +61,82 @@
            session.setAttribute("puntaje", 0);
         %>
          <h2>Menu Principal</h2>
-          <div class="container">
-    <div class="card">
-        <div class="face face1">
-            <div class="content">
-                <i class="fas fasju fa-chalkboard-teacher fa-camera fa-5x"></i>
-                <h3>Jugar</h3>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>Pon a prueba tus conocimientos sobre los modelos de ciclo de vida del software</p>
-                    <a href="P_EscogerDificultad.html">Jugar</a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="face face1">
-            <div class="content">
-                <i class="fas fasra fa-award fa-5x"></i>
-                <h3>Ranking</h3>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>¿Hiciste un buen intento?, Visita el ranking para observar tu posición!</p>
-                    <a href="P_Ranking.jsp">Ver Ranking</a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="face face1">
-            <div class="content">
-                <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
-                <h3>Acerca de</h3>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>Obten información del proyecto, sus desarrolladores y redes sociales!</p>
-                    <a href="P_AcercaDe.html">Saber mas</a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="face face1">
-            <div class="content">
-                <i class="fas fasac fa-info fa-5x"></i>
-                <h3>Infografia</h3>
-            </div>
-        </div>
-        <div class="face face2">
-            <div class="content">
-                <p>Aumenta tus conocimientos, prepárate para la prueba</p>
-                    <a href="#">Leer</a>
-            </div>
-        </div>
-    </div>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <i class="fas fasju fa-chalkboard-teacher fa-camera fa-5x"></i>
+                            <h3>Jugar 🎮</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Pon a prueba tus conocimientos sobre los modelos de ciclo de vida del software ⚙</h3>
+                                <a href="P_EscogerDificultad.html" style='font-size: 2rem;'>Jugar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <i class="fas fasra fa-award fa-5x"></i>
+                            <h3>Ranking 🏆</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>¿Hiciste un buen intento?, Visita el ranking para observar tu posición! 🥇</h3>
+                                <a href="P_Ranking.jsp"style='font-size: 2rem;'>Ver Ranking</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                            <h3>Acerca de 🎁</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Obten información del proyecto, sus desarrolladores y redes sociales! 🏼</h3>
+                                <a href="P_AcercaDe.html"style='font-size: 2rem;'>Saber mas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <i class="fas fasac fa-info fa-5x"></i>
+                            <h3>Infografia 🎇</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <h3>Aumenta tus conocimientos, prepárate para la prueba 📚</h3>
+                                <a href="#" style='font-size: 2rem;'>Leer</a>
+                        </div>
+                    </div>
+                </div>
 
- </div>
+            </div>
 
               <%  }
             else if(IDUsuario==2){
         %>
-        <h2>Menu Principal</h2>
+        <h2>Menu De Docentes</h2>
          <div class="container">
        <div class="card">
         <div class="face face1">
             <div class="content">
                 <i class="fas fasju fa-chalkboard-teacher fa-camera fa-5x"></i>
-                <h3>Jugar</h3>
+                <h3>Jugar 📘</h3>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                    <a href="P_EscogerDificultad.html">Jugar</a>
+                <h3>Compruebe la manera en que se le presentarán sus preguntas a los estudiantes 📑</h3>
+                <a href="P_EscogerDificultad.html" style='font-size: 2rem;'>Jugar</a>
             </div>
         </div>
     </div>
@@ -144,13 +144,13 @@
         <div class="face face1">
             <div class="content">
                 <i class="fas fasra fa-award fa-5x"></i>
-                <h3>Ranking</h3>
+                <h3>Ranking 📗</h3>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                    <a href="P_Ranking.jsp">Ver Ranking</a>
+                <h3>Verifique el avance de sus estudiantes con el ranking general 🥇</h3>
+                <a href="P_Ranking.jsp" style='font-size: 2rem;'>Ver Ranking</a>
             </div>
         </div>
     </div>
@@ -158,13 +158,13 @@
         <div class="face face1">
             <div class="content">
                 <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
-                <h3>Ad. Preguntas</h3>
+                <h3>Ad. Preguntas 📕</h3>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                    <a href="#">Saber mas</a>
+                <h3>¿Quieres añadir nuevas preguntas? Este es el botón indicado! 📚</h3>
+                <a href="#" style='font-size: 2rem;'>Saber mas</a>
             </div>
         </div>
     </div>
@@ -173,19 +173,19 @@
             }
             else{
         %>  
-        <h2>Menu Principal</h2>
+        <h2>Menu De Administradores</h2>
          <div class="container">
         <div class="card ">
         <div class="face face1 ">
             <div class="content ">
                 <i class="fas fasju fa-chalkboard-teacher fa-camera fa-5x"></i>
-                <h3>Ad. Usuarios</h3>
+                <h3>Ad. Usuarios ⚙</h3>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
-                    <a href="#">Gestionar</a>
+                <h3>Administra la data de todos los usuarios dentro de SoLi - Software Life! ⚙</h3>
+                    <a href="#" style='font-size: 2rem;'>Gestionar</a>
             </div>
         </div>
     </div>

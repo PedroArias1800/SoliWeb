@@ -23,6 +23,7 @@
             
             String _nivel="";
             String cedula = (String)session.getAttribute("ID_usuario");
+            String imagen="../Imagenes/PuedesMejorar.gif";
             
             int porcentaje=0;
             int exis=0, i1=0, i2=0, i3=0;
@@ -45,6 +46,12 @@
                 i3=3;
             }
             
+            if(porcentaje<=91){
+                imagen="../Imagenes/Excelente.gif";
+            } else if(porcentaje<91 && porcentaje>71){
+                imagen="../Imagenes/Bien.gif";
+            }
+            
             List<Puntaje> puntaje = p.BuscarPuntaje(cedula);
             for(Puntaje existe: puntaje){
                 exis = 1;
@@ -60,6 +67,7 @@
                 <h3>Respuestas Correctas: <%=tpc%></h3>
                 <h3>Respuestas Incorrectas: <%=tpi%></h3>
                 <h3>Porcentaje De Efectividad: <%=porcentaje%>%</h3>
+                <img src="<%=imagen%>" alt="" width="500" height="200">
             
         <%
             }   else    {    %>
