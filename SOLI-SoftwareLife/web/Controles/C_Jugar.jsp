@@ -18,7 +18,6 @@
         <%
             int num = (int)session.getAttribute("iniciar");
             int puntaje = Integer.parseInt(request.getParameter("puntaje"));
-            puntaje = puntaje + (int)session.getAttribute("puntaje");
                 
             String continuar = request.getParameter("continuar");
             
@@ -36,6 +35,7 @@
                     
             }
             
+            puntaje = puntaje + (int)session.getAttribute("puntaje");
             int repetir = 0;
             
             List<Preguntas> Devolver = new ArrayList<>();

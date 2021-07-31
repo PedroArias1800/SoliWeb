@@ -162,46 +162,48 @@
 
         %>
     
-        <h2 id="Retro" style="display: none;">Respuesta: <input type="text" id="corre" value="" readonly>
+        <h2 id="Retro" style="display: none;">Respuesta: <p id="corre"></p>
             La respuesta era <%=pr.getrCorrecta()%>
         </h2>
-
+ 
         <input type="hidden" value="<%=puntos%>" id="puntos">
         <input type="hidden" value="<%=pr.getrCorrecta()%>" id="resp">
-
+ 
         <form action="../Controles/C_Jugar.jsp" method="post">
             <input type="hidden" name="continuar" value="<%=enviar%>">
-            <label value="Puntos: "><input type="number" value="0" name="puntaje" id="pun"></label>
+            <label value="Puntos: "><input type="text" value="0" name="puntaje" id="pun"></label>
             <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
         </form>
-
+ 
         <script>
                     $(function(){
                     $('#btn1, #btn2').on('click', function(){
                     document.getElementById("sig").disabled = false;
                     document.getElementById("btn1").disabled = true;
                     document.getElementById("btn2").disabled = true;
-
+ 
                     document.getElementById("Retro").style.display="block";
-
+ 
                     });
                     });
-
+ 
                     $(function() {
                     $('#btn1, #btn2').on('click', function() {
-
-                        var era = "Incorrecto";
-
-                        if((this.value).equals(document.getElementById('resp').value)){
+ 
+                        let era = "Incorrecto";
+ 
+                        if(this.getAttribute('value') === document.getElementById('resp').getAttribute('value')){
                             era = "Correcta";
-                            document.getElementById('puntos').value = "5";  
+                            document.getElementById('pun').value = 5;
+                            document.getElementById('corre').innerHTML = era;
                         }
-
-                            document.getElementById('puntos').value = "0";
-                            document.getElementById('corre').value = era;
+                           else{
+                            document.getElementById('pun').value = 0;
+                            document.getElementById('corre').innerHTML = era;
+                        }
                     });
                     });
-
+ 
                     $(function(){
                     $('#btn1, #btn2, #btn3, #btn4').on('click', function(){
                     document.getElementById("sig").disabled = false;
@@ -209,24 +211,26 @@
                     document.getElementById("btn2").disabled = true;
                     document.getElementById("btn3").disabled = true;
                     document.getElementById("btn4").disabled = true;
-
+ 
                     document.getElementById("Retro").style.display="block";
-
+ 
                     });
                     });
-
+ 
                     $(function() {
                     $('#btn1, #btn2, #btn3, #btn4').on('click', function() {
-
-                        var era = "Incorrecto";
-
-                        if((this.value).equals(document.getElementById('resp').value)){
+ 
+                        let era = "Incorrecto";
+ 
+                        if(this.getAttribute('value') === document.getElementById('resp').getAttribute('value')){
                             era = "Correcta";
-                            document.getElementById('puntos').value = "5";  
+                            document.getElementById('pun').value = 5;
+                            document.getElementById('corre').innerHTML = era;
                         }
-
-                            document.getElementById('puntos').value = "0";
-                            document.getElementById('corre').value = era;
+                           else{
+                            document.getElementById('pun').value = 0;
+                            document.getElementById('corre').innerHTML = era;
+                        }
                     });
                     });
         </script>
