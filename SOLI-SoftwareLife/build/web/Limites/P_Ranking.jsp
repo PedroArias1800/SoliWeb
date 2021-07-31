@@ -30,7 +30,7 @@
                     <br>
                     </div>
                     <div class="container1">
-                    <span style="-l: '¡Software Life';">Software Life</span>         
+                    <span style="-l: '¡Software Life!';">Software Life</span>         
             </div>
            <!--  <h1 class="Titulo">SOLI<br>Software Life</h1>
             <h2 class="Login">Menú Principal</h2> -->

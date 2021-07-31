@@ -31,12 +31,18 @@
         <button class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             <i class="fas fa-cog  fa-camera fa-3x"></i>
         </button>
-      </p>
-      <div class="collapse submit" id="collapseExample">
-        <div class="cc card-body">
+        </p>
+        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%;">
+            <div class="cc card-body">
             <Button  class="oscuro dark" id="dark">Modo Oscuro</Button>
-            <Button onclick="window.location.href='P_Login.html'" class="oscuro dark" id="dark">Cerrar Session</Button>
-      </div>
+                <form action="../Controles/C_Login.jsp" method="post">
+                    <input type="hidden" value="Salir" name="Correo">
+                    <input type="hidden" value="Salir2" name="Password">
+                    <input type="hidden" value="1" name="vengoDe"> 
+                    <Button type="submit" onclick="window.location.href='P_Login.html'" class="oscuro dark" id="dark">Cerrar Session</Button>
+                </form>
+           </div>
+        </div>
         </header>
         <%
             int IDUsuario = 0;
@@ -45,16 +51,7 @@
             }
             Usuario u = new Usuario();
             u.setType(IDUsuario);
-        %>
-        <div  class="Opc2">
-                <form action="../Controles/C_Login.jsp" method="post">
-                    <input class="Botones" type="hidden" value="Salir" name="Correo">
-                    <input class="Botones" type="hidden" value="Salir2" name="Password">
-                    <input class="Botones" type="hidden" value="1" name="vengoDe"> 
-                    <input class="Botones"  type="submit" value="" >
-                </form>
-            </div>
-        <%
+            
             if(IDUsuario==3){ 
         %>
         
@@ -74,7 +71,7 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                <p>Pon a prueba tus conocimientos sobre los modelos de ciclo de vida del software</p>
                     <a href="P_EscogerDificultad.html">Jugar</a>
             </div>
         </div>
@@ -88,7 +85,7 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                <p>¿Hiciste un buen intento?, Visita el ranking para observar tu posición!</p>
                     <a href="P_Ranking.jsp">Ver Ranking</a>
             </div>
         </div>
@@ -102,7 +99,7 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                <p>Obten información del proyecto, sus desarrolladores y redes sociales!</p>
                     <a href="P_AcercaDe.html">Saber mas</a>
             </div>
         </div>
@@ -116,7 +113,7 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                <p>Aumenta tus conocimientos, prepárate para la prueba</p>
                     <a href="#">Leer</a>
             </div>
         </div>
