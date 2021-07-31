@@ -99,12 +99,13 @@ form{
  font-size: 1.85rem;
 }
 .form-group input{
+    font-size: 1.4rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 0.5rem;
 }
 ::placeholder {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 
