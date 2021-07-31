@@ -154,7 +154,7 @@
     
         <%      }      
 
-            if(numPregunta==10){
+            if(numPregunta==cantidadPreguntas){
                 enviar = "No";
             } else {
                 enviar = "Si";

@@ -49,7 +49,7 @@
             for(Puntaje existe: puntaje){
                 exis = 1;
             }
-
+            
             boolean resultados = r.RegistrarIntento(cedula, nivel, puntos, i1, i2, i3, tpc, tpi, exis);
             
             if(resultados){     %>
