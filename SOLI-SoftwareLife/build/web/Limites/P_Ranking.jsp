@@ -16,11 +16,24 @@
         <link rel="stylesheet" href="../Css/LoginPrincipal.css"/>
         <!--<link rel="stylesheet" href="../Css/CSShumilde.css">-->
         <link rel="stylesheet" href="../Css/ModoClaro.css"/>
+        <link rel="stylesheet" href="../Css/p_ranking.css"/>
+
     </head>
     <body class="Fondo">
         <header>    <!-- Encabezado -->
-            <h1 class="Titulo">SOLI<br>Software Life</h1>
-            <h2 class="Login">Menú Principal</h2>
+           
+            <div class="container">
+                    <span style="--l: 'S';" >S</span>
+                    <span style="--l: 'O';" >O </span>
+                    <span style="--l: 'L';" >L</span>
+                    <span style="--l: 'I';" >I</span>
+                    <br>
+                    </div>
+                    <div class="container1">
+                    <span style="-l: '¡Software Life';">Software Life</span>         
+            </div>
+           <!--  <h1 class="Titulo">SOLI<br>Software Life</h1>
+            <h2 class="Login">Menú Principal</h2> -->
         </header>
         <div>
             <label for='dif'>Selecciona una dificultad</label>
@@ -32,7 +45,7 @@
                 </optgroup>
             </select>
         </div>
-        <div>
+        <div id="main-container">
             
             <table>
                 <caption>Ranking De Los Estudiantes</caption>
