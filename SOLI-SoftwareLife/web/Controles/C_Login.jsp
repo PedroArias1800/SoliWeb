@@ -22,8 +22,9 @@
     <body class="Fondo">
         <header>    <!-- Encabezado -->
         <div class="contenedor">
-            <h1>Soli Software Life</h1>
-            
+            <p style="text-align: center; margin-top: 1%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
             <form>
                     
                 <%  String Correo = request.getParameter("Correo");

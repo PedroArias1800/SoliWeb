@@ -24,13 +24,13 @@
     </head>
     <body>
         <header>  
-            <h1 class="h1">Soli Software Life</h1><!-- Encabezado -->
-           <p>
-    
-      
-        <button class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-cog  fa-camera fa-3x"></i>
-        </button>
+        <p style="text-align: center; margin-bottom: -4%;">
+            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+        </p><!-- Encabezado -->
+        <p>
+            <button style="margin-top: -15%;" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fas fa-cog  fa-camera fa-3x"></i>
+            </button>
         </p>
         <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%;">
             <div class="cc card-body">
@@ -60,7 +60,7 @@
            session.setAttribute("prA", 0);
            session.setAttribute("puntaje", 0);
         %>
-         <h2>Menu Principal</h2>
+        <h2>Menu Principal</h2>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
