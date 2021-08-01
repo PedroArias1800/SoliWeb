@@ -37,6 +37,20 @@ button.primary{
   background: #252850;
 }
 
+.btn.btn-secondary{
+  font-size: 1.3rem;
+  background: #252850;
+}
+
+.btn.btn-link{
+  font-size: 1.8rem;
+}
+.btn.btn-outline-danger{
+  font-size: 1.8rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .submit, .oscuro{
   margin-top: 1rem ;
   position: relative;
@@ -150,6 +164,7 @@ button.primary{
   display:flex;
   align-items: center;
   justify-content: space-evenly;
+  justify-self: center;
 }
 
 .form-group label{
@@ -177,3 +192,9 @@ body.darkmode{
 .dark{
   margin-left: 90%;
 }
+
+.utp, .fisc{
+  height: 8em;
+  width: 8em;
+}
+
