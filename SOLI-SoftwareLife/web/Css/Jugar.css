@@ -16,6 +16,27 @@ html {
     background: rgb(238,174,202);
 background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   }
+  
+  .tipoPreg{
+      text-align: center;
+      margin-bottom: 2%;
+      margin-top: -1%;
+  }
+  
+  .nombre{
+      display: grid;
+      grid-template-column: repeat(1,1fr);
+  }
+  
+  .preg input{
+      font-size: 2rem;
+      background-color: #131a43;
+      color: white;
+      border-radius: 5px;
+      margin-left: 2%;
+      margin-right: 5%;
+      margin-bottom: 1%;
+  }
 
   html h1{
       padding-top: 0rem;
@@ -131,7 +152,7 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
     background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
-    color: white;
+      color: white;
   }
   .dark{
     margin-left: 90%;

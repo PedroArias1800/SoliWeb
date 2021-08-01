@@ -13,11 +13,7 @@ html {
       font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
-
-
-  }
-  main{
-      height: 100vh;
+    
     background: linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
 
     background: -moz-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
@@ -25,6 +21,10 @@ html {
     background: -webkit-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
     
     filter: progid DXImageTransform.Microsoft.gradient( startColorstr="#83F5E5", endColorstr="#E761BD", GradientType=1 );
+
+  }
+  main{
+      height: 100vh;
   }
 
   html h1{
@@ -165,3 +165,12 @@ footer .contededor{
     height: 8em;
     width: 8em;
 }
+
+  body.darkmode{
+    background: rgb(2,0,36);
+    background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
+      color: white;
+  }
