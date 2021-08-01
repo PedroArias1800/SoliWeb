@@ -11,11 +11,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <title>Retroalimentación</title>
     </head>
     <body>
-            <h3>Retroalimentación</h3>
+        <main>
+        <div class="contenedor">
+            <div class="titulos">
+                <h3>Retroalimentación Del Intento</h3>
+            </div>
+            <form style="margin-left: 35%;" id="retroa">
         <%
             if((int)session.getAttribute("tipoUsuario")==3){
             Ranking r = new Ranking();
@@ -46,7 +58,7 @@
                 i3=3;
             }
             
-            if(porcentaje<=91){
+            if(porcentaje>=91){
                 imagen="../Imagenes/Excelente.gif";
             } else if(porcentaje<91 && porcentaje>71){
                 imagen="../Imagenes/Bien.gif";
@@ -61,19 +73,19 @@
             
             if(resultados){     %>
                 
-                <br><p>Estos son tus resultados del intento<br><br>
-                <h3>Puntos Obtenidos: <%=puntos%></h3>
-                <h3>Intento: Nivel <%=_nivel%></h3>
-                <h3>Respuestas Correctas: <%=tpc%></h3>
-                <h3>Respuestas Incorrectas: <%=tpi%></h3>
-                <h3>Porcentaje De Efectividad: <%=porcentaje%>%</h3>
-                <img src="<%=imagen%>" alt="" width="500" height="200">
+                <h3>Estos son tus resultados:</h3><br><br>
+                <h2>Puntos Obtenidos: <%=puntos%></h2>
+                <h2>Intento: Nivel <%=_nivel%></h2>
+                <h2>Respuestas Correctas: <%=tpc%></h2>
+                <h2>Respuestas Incorrectas: <%=tpi%></h2>
+                <h2>Porcentaje De Efectividad: <%=porcentaje%>%</h2>
+                <img style="margin-left: -8%;" src="<%=imagen%>" alt="" width="500" height="150">
             
         <%
             }   else    {    %>
                     
                 <br><p>Error Al Guardar Tus Resultados<br><br>
-                Ah ocurrido un error al guardar en <strong>El Ranking</strong> :(</p><br><br><br>
+                Ah ocurrido un error al guardar en <strong>El Ranking</strong></p><br><br><br>
                 
         <%
             }
@@ -86,12 +98,15 @@
         }   else {    %>
                 
                 <br><p>Esperamos que haya verificado todos los datos de la prueba<br><br>
-                Sus resultados no se guardarán en <strong>El Ranking</strong> :)</p><br><br><br>
+                Sus resultados no se guardarán en <strong>El Ranking</strong></p><br><br><br>
         
         <%  }     %>
-        
-        <form action="P_MenuLogin.jsp" method="post">
-            <input type="submit" value="Volver Al Menú Principal">
-        </form>
+            <div class="otros">
+              <button type="button" style="margin-left: 10%;" onclick="window.location.href='P_MenuLogin.jsp'" class="submit primary reg">Volver Al Menú Principal</button>
+            </div>
+            </form>
+        </div>
+        <script src="../JavaScript/script.js"></script>
+        </main>
     </body>
 </html>

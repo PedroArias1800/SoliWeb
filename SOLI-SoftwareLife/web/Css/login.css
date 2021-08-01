@@ -29,6 +29,10 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
       text-align: center;
       font-size: 4rem;
   }
+  #retroa h2{
+      text-align: center;
+      font-size: 2rem;
+  }
   #bdark{
       text-align: end;
     

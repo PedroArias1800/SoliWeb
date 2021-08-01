@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>    <!-- Titulo De La Página Del Navegador -->
+        <title>Menu Principal</title>    <!-- Titulo De La Página Del Navegador -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../Css/menu.css"/>
@@ -114,7 +114,7 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>Aumenta tus conocimientos, prepárate para la prueba 📚</h3>
-                                <a href="#" style='font-size: 2rem;'>Leer</a>
+                                <a href="P_Infografia.html" style='font-size: 2rem;'>Leer</a>
                         </div>
                     </div>
                 </div>

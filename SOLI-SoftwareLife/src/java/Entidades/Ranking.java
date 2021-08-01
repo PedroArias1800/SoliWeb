@@ -20,6 +20,20 @@ import java.util.List;
 public class Ranking {
 
     /**
+     * @return the nivel
+     */
+    public int getNivel() {
+        return nivel;
+    }
+
+    /**
+     * @param nivel the nivel to set
+     */
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    /**
      * @return the Nombre
      */
     public String getNombre() {
@@ -94,6 +108,7 @@ public class Ranking {
     private String Nombre;
     private String Apellido;
     private int puntos;
+    private int nivel;
     Connection cn;
     
     public Ranking(){
@@ -104,7 +119,7 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "CALL MostrarRanking('1')";
+            String query = "CALL MostrarRanking()";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();
@@ -113,34 +128,7 @@ public class Ranking {
                 R.setNombre(result.getString("u.firstname"));
                 R.setApellido(result.getString("u.lastname"));
                 R.setPuntos(result.getInt("pun"));
-                r.add(R);
-            } 
-           result.close();
-           stmt.close();
-           
-           return(r);
-        }
-        catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-       
-        return(null);
-    }
-    
-    public List<Ranking> BuscarRankingEspecifico(int n) throws SQLException{
-        List<Ranking> r = new ArrayList<>();
-        try{   
-            Statement stmt = cn.createStatement();
-            String query = "CALL MostrarRanking('"+n+"')";
-            ResultSet result = stmt.executeQuery(query);
-            while(result.next()){
-                Ranking R = new Ranking();
-                R.setPos(pos=pos+1);
-                R.setID_estudiante(result.getString("r.estudiante"));
-                R.setNombre(result.getString("u.firstname"));
-                R.setApellido(result.getString("u.lastname"));
-                R.setPuntos(result.getInt("r.puntos"));
-                R.setPuntos(result.getInt("r.puntos"));
+                R.setNivel(result.getInt("r.nivel_id"));
                 r.add(R);
             } 
            result.close();

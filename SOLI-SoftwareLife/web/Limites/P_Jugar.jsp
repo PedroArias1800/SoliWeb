@@ -11,13 +11,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSShumilde.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <title>SOLI - Jugar</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <div class="contenedor">
         <%
             int dif = (int)session.getAttribute("nivel");
             String _nivel="", _tipo="", enviar="";
@@ -39,10 +45,10 @@
             int puntos = (int)session.getAttribute("puntaje");
 
         %>
-
-        <div class="titulos">
-            <h3 id="mod">Prueba - Nivel: <%=_nivel%></h3><hr>
-        </div>
+        
+        <br>
+        <h3 id="mod">Prueba - Nivel: <%=_nivel%></h3><hr>
+        <form style="align-content: center; padding-bottom: 20%; margin-bottom: 1.5%;">
 
         <%
             List<Preguntas> PreguntaActual = (List<Preguntas>)session.getAttribute("PreguntaActual");
@@ -126,32 +132,21 @@
 
         %>
 
-        <h3 id="timer"></h3>
+        <h2 style="text-align: center; margin-bottom: 2%; margin-top: -1%;" id="num"><b><u>Pregunta #<%=numPregunta%></u><u style="margin-left: 20%;">Tipo :<%=_tipo%></u></b></h2>
+        <h1 id="preg"><%=pr.getEnunciado()%></h1><h3 style="margin-left: 91%; margin-top: -7.5%; position: absolute; background-color: white; border: 1px solid black; border-radius: 5px; padding-left: 1%; padding-right: 1%;" id="timer"></h3>
 
-        <h2 id="num"><b><u>Pregunta #<%=numPregunta%></u></b></h2>
-        <h2><b><u>Tipo :<%=_tipo%></u></b></h2>
-        <h1 id="preg"><%=pr.getEnunciado()%></h1>
-
-        <div>
-            <input type="button"
-            value="<%=generarRespuestas[0]%>"
-            class="btn" id="btn1">
-            <input type="button"
-            value="<%=generarRespuestas[1]%>"
-            class="btn" id="btn2">
+        <div style="display: flex; justify-content: center; margin-bottom: 1%;">
+            <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[0]%>" id="btn1">
+            <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[1]%>" id="btn2">
         </div>
 
             <%
                 if(pr.getTipo()!=1){
             %>
         
-        <div>
-            <input type="button"
-            value="<%=generarRespuestas[2]%>"
-            class="btn" id="btn3">
-            <input type="button"
-            value="<%=generarRespuestas[3]%>"
-            class="btn" id="btn4">
+        <div style="display: flex; justify-content: center;">
+            <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[2]%>" id="btn3">
+            <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[3]%>" id="btn4">
         </div>
     
         <%      }      
@@ -163,18 +158,22 @@
             }
 
         %>
-    
-        <h2 id="Retro" style="display: none;"><img src="" id="corre"  alt="" width="150" height="150">
-            La respuesta era <%=pr.getrCorrecta()%>
-        </h2>
+        <div id="Retro" style="display: flex; justify-content: center; position: absolute; display: none;">
+            <h2 style="margin-bottom: 0.5%;">
+                <img src="../Imagenes/Incorrecto.gif" id="corre" alt="" width="500" height="200"><br>
+                La respuesta era: <%=pr.getrCorrecta()%>
+            </h2>
+        </div>
+
+            <input type="hidden" value="<%=puntos%>" id="puntos">
+            <input type="hidden" value="<%=pr.getrCorrecta()%>" id="resp">
+        
+        </form>
  
-        <input type="hidden" value="<%=puntos%>" id="puntos">
-        <input type="hidden" value="<%=pr.getrCorrecta()%>" id="resp">
- 
-        <form action="../Controles/C_Jugar.jsp" method="post">
+        <form action="../Controles/C_Jugar.jsp" method="post" style="display: flex; justify-content: center; margin-bottom: 1.5%;">
             <input type="hidden" name="continuar" value="<%=enviar%>">
-            <label for="pun" value="Puntos: "></label><input type="text" value="0" name="puntaje" id="pun">
-            <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
+            <h2>Puntos Adquiridos:<input style="margin-left: 2%; padding-right: -70%;" type="text" value="0" name="puntaje" id="pun" readonly></h2>
+            <input type="submit" onclick="" value="Siguiente Pregunta" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" id="sig" disabled>
         </form>
  
         <script>
@@ -247,10 +246,10 @@
                 }  
             %>   
 
-        <!--
+        
         <script LANGUAGE="JavaScript">
             history.forward()
-        </script>-->
+        </script>
 
         <script type="text/javascript">
             var count = 3;
@@ -285,5 +284,8 @@
             }, 1000);
 
         </script>
+        </div>
+    </main>
+    <script src="../JavaScript/script.js"></script>
     </body>
 </html>
