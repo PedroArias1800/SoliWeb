@@ -1,0 +1,167 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body{
+      height: 100vh;
+      font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+
+
+  }
+  main{
+      height: 100vh;
+    background: linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+
+    background: -moz-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+    
+    background: -webkit-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#83F5E5", endColorstr="#E761BD", GradientType=1 );
+  }
+
+  html h1{
+      padding-top: 0rem;
+      text-align: center;
+      font-size: 4rem;
+      padding-bottom: 4rem;
+    
+
+  }
+  h3{
+      text-align: center;
+      font-size: 4rem;
+  }
+  #bdark{
+      text-align: end;
+    
+      
+  }
+  #btn-1.primary, #btn-2.primary, #btn-3.primary{
+    background: #5d2fdf;
+  }
+  
+  .enviar{
+    margin-left: 45%;
+    
+  }
+
+  .reg{
+  margin-left: 41.5rem;
+  margin-right: 2.5rem;
+  
+  }
+ 
+  #btn-1,#btn-2,#btn-3{
+    margin-top: 1rem ;
+   position: relative;
+   overflow: hidden;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   height: 4.5rem;
+   padding: 0 3rem;
+   font-family: inherit;
+   font-size: 1.25rem;
+   border: 0;
+   border-radius: 0.5rem;
+   background: transparent;
+   color: white;
+   cursor: pointer;
+   outline: none;
+   transition-property: background, box-shadow;
+   transition-duration: 0.35s;
+  }
+   #btn-1:hover, #btn-2:hover, #btn-3:hover{
+    background: #5526c5;
+  }
+ .submit:focus{
+   box-shadow: 0 0 0 3px #8659e9;
+ }
+ #btn-1, #btn-2, #btn-3{
+   color: white;
+  margin-left: 0%;
+  background: #5d2fdf;
+}
+
+  /**Globales**/
+  
+  .contenedor {
+    max-width: 120rem;
+    width:90%;
+    width: min(90%, 1290rem); /**lO MISMO QUE ARRIBA**/
+    margin: 0 auto;
+  }
+
+
+  form{
+    
+    padding: 5rem 5rem 5rem 20px; 
+    margin-top: 2rems;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+  }
+.form-group label{
+   font-size: 1.85rem;
+}
+.form-group input{
+  font-size: 1.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+::placeholder {
+    font-size: 1em;
+  }
+  
+
+
+  body.darkmode{
+    background: rgb(2,0,36);
+    background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
+      color: white;
+  }
+  .dark{
+    margin-left: 90%;
+  }
+.dificultad{
+    margin-left: 40%;
+    width: 20em;
+    height: 15em;
+}
+.opciones{
+    gap: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    padding-top: 1.5rem;
+    background: #345460;
+}
+footer .contededor{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.utp, .fisc{
+    height: 8em;
+    width: 8em;
+}
