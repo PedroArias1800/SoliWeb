@@ -135,7 +135,7 @@
         <h2 style="text-align: center; margin-bottom: 2%; margin-top: -1%;" id="num"><b><u>Pregunta #<%=numPregunta%></u><u style="margin-left: 20%;">Tipo :<%=_tipo%></u></b></h2>
         <h1 id="preg"><%=pr.getEnunciado()%></h1><h3 style="margin-left: 91%; margin-top: -7.5%; position: absolute; background-color: white; border: 1px solid black; border-radius: 5px; padding-left: 1%; padding-right: 1%;" id="timer"></h3>
 
-        <div style="display: flex; justify-content: center; margin-bottom: 1%;">
+        <div style="margin-bottom: 1%; marg">
             <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[0]%>" id="btn1">
             <input type="button" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" value="<%=generarRespuestas[1]%>" id="btn2">
         </div>
