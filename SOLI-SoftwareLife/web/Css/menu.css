@@ -9,7 +9,7 @@ html {
   }
   
   body{
-   
+   color: white;
       height: 100vh;
       font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
@@ -184,21 +184,20 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
 }
 
 body.darkmode{
-    color: white;
+    color: black;
   background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
   background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
   background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
-   
+    
 }
-.card::after.darkmode{
-  background: green;
-  transform: translateY(0);
-}
+
+
 
 .fasju, .fasra,.fasac{
   color: white;
 }
-.oscuro.darkmode{
-  color: white;
+
+.darkmode h2{
+    color: white;
 }

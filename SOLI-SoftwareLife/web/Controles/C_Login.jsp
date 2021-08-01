@@ -75,7 +75,6 @@
 
                 <div class="form-group">
                   <h2 style="text-align: center;">Error al iniciar sesión</h2><br>
-                     <h2 style="text-align: center;">Inicio de sesión exitoso</h2><br>
                  <div class="sk-folding-cube">
                    <div class="sk-cube1 sk-cube"></div>
                    <div class="sk-cube2 sk-cube"></div>
