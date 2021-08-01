@@ -105,7 +105,7 @@
                   <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong> :)</h2>
                 </div>
                 
-                <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>
+                <head><meta http-equiv="Refresh" content="1.5 ; URL=../Limites/P_Login.html"></head>
                 <%  }
                 %>
             </form>

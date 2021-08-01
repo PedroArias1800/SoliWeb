@@ -160,7 +160,8 @@
         %>
         <div id="Retro" style="display: flex; justify-content: center; position: absolute; display: none;">
             <h2 style="margin-bottom: 0.5%;">
-                <img src="../Imagenes/Incorrecto.gif" id="corre" alt="" width="500" height="200"><br>
+                <img src="../Imagenes/Incorrecto.gif" id="corre2" alt="" width="500" height="200" style="display: none"><br>
+                <img src="../Imagenes/Correcto.gif" id="corre1" alt="" width="500" height="200" style="display: none"><br>
                 La respuesta era: <%=pr.getrCorrecta()%>
             </h2>
         </div>
@@ -191,16 +192,13 @@
                     $(function() {
                     $('#btn1, #btn2').on('click', function() {
  
-                        let era = "../Imagenes/Incorrecto.gif";
- 
                         if(this.getAttribute('value') === document.getElementById('resp').getAttribute('value')){
-                            era = ".../Imagenes/Correcto.gif";
                             document.getElementById('pun').value = 5;
-                            document.getElementById('corre').innerHTML = era;
+                            document.getElementById('corre').style.display="block";
                         }
                            else{
                             document.getElementById('pun').value = 0;
-                            document.getElementById('corre').innerHTML = era;
+                            document.getElementById('corre2').style.display="block";
                         }
                     });
                     });
