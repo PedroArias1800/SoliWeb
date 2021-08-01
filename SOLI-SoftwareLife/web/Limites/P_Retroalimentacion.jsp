@@ -103,7 +103,7 @@
         
         <%  }     %>
             <div class="otros">
-              <button type="button" style="margin-left: 39%;" onclick="window.location.href='P_MenuLogin.jsp'" class="submit primary reg">Volver Al Menú Principal</button>
+              <button type="button" style="margin-left: 41%;" onclick="window.location.href='P_MenuLogin.jsp'" class="submit primary reg">Volver Al Menú Principal</button>
             </div>
             </div>
             </form>

@@ -82,9 +82,13 @@
             </table>
             </form>
         </div>
-        <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
-            <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
-            <a href="https://fisc.utp.ac.pa/"><img src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+        <footer>   
+            <div class="contededor">
+                <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
+                <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+            </div>
+            <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+          
         </footer>
         </main> 
         <script src="../JavaScript/script.js"></script>

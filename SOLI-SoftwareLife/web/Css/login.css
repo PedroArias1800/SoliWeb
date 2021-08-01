@@ -16,6 +16,13 @@ html {
     background: rgb(238,174,202);
 background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   }
+  
+.contenedor {
+    max-width: 120rem;
+    width:90%;
+    width: min(90%, 1290rem); /**lO MISMO QUE ARRIBA**/
+    margin: 0 auto;
+  }
 
   html h1{
       padding-top: 0rem;
@@ -123,8 +130,6 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
     font-size: 1em;
   }
   
-
-
   body.darkmode{
     background: rgb(2,0,36);
     background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);

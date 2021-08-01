@@ -153,17 +153,25 @@ html {
 }
 footer{
     padding-top: 1.5rem;
-    background: #345460;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 1.8rem;
 }
 footer .contededor{
     display: flex;
     justify-content:space-evenly;
-    
 }
-
 .utp, .fisc{
     height: 8em;
     width: 8em;
+    background-color: white;
+    border-radius: 70px;
 }
 
   body.darkmode{
@@ -172,5 +180,5 @@ footer .contededor{
     background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
-      color: white;
+    color: white;
   }
