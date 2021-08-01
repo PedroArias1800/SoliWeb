@@ -136,7 +136,6 @@ public class Usuario {
         try{   
             int r;
             Statement stmt = cn.createStatement();
-            //String query = "INSERT INTO cvid_usuario('"+Cedula+"','"+firstName+"', '"+lastName+"', '"+Email+"'. '"+Contra1+"', '"+Type+"')";
             String query = "CALL RegistrarUsuario('"+Cedula+"', '"+firstName+"', '"+lastName+"', '"+Email+"', '"+Contra1+"', '"+Type+"')";
             r = stmt.executeUpdate(query);
             if(r>0){

@@ -20,6 +20,20 @@ import java.util.List;
 public class Ranking {
 
     /**
+     * @return the nivel
+     */
+    public int getNivel() {
+        return nivel;
+    }
+
+    /**
+     * @param nivel the nivel to set
+     */
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    /**
      * @return the Nombre
      */
     public String getNombre() {
@@ -94,6 +108,7 @@ public class Ranking {
     private String Nombre;
     private String Apellido;
     private int puntos;
+    private int nivel;
     Connection cn;
     
     public Ranking(){
@@ -104,8 +119,7 @@ public class Ranking {
         List<Ranking> r = new ArrayList<>();
         try{   
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, r.puntos FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id=1 ORDER BY puntos DESC";
+            String query = "CALL MostrarRanking()";
             ResultSet result = stmt.executeQuery(query);
             while(result.next()){
                 Ranking R = new Ranking();
@@ -113,8 +127,8 @@ public class Ranking {
                 R.setID_estudiante(result.getString("r.estudiante"));
                 R.setNombre(result.getString("u.firstname"));
                 R.setApellido(result.getString("u.lastname"));
-                R.setPuntos(result.getInt("r.puntos"));
-                R.setPuntos(result.getInt("r.puntos"));
+                R.setPuntos(result.getInt("pun"));
+                R.setNivel(result.getInt("r.nivel_id"));
                 r.add(R);
             } 
            result.close();
@@ -129,33 +143,27 @@ public class Ranking {
         return(null);
     }
     
-    public List<Ranking> BuscarRankingEspecifico(int n) throws SQLException{
-        List<Ranking> r = new ArrayList<>();
-        try{   
+    public boolean RegistrarIntento(String Cedula, int nivel, int puntos, int i1, int i2, int i3, int tpc, int tpi, int existe) throws SQLException{
+        try{
+            int r;
             Statement stmt = cn.createStatement();
-            String query = "SELECT r.estudiante, u.firstname, u.lastname, r.puntos FROM cvid_ranking r INNER JOIN cvid_usuario u ON r.estudiante = u.ID_usuario ";
-            query += "WHERE r.nivel_id='"+n+"' ORDER BY puntos DESC";
-            ResultSet result = stmt.executeQuery(query);
-            while(result.next()){
-                Ranking R = new Ranking();
-                R.setPos(pos=pos+1);
-                R.setID_estudiante(result.getString("r.estudiante"));
-                R.setNombre(result.getString("u.firstname"));
-                R.setApellido(result.getString("u.lastname"));
-                R.setPuntos(result.getInt("r.puntos"));
-                R.setPuntos(result.getInt("r.puntos"));
-                r.add(R);
-            } 
-           result.close();
-           stmt.close();
-           
-           return(r);
+            String query="";
+            if(existe==0){
+                query = "CALL InsertarPuntajeNuevo('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+i1+"', '"+i2+"', '"+i3+"', '"+tpc+"', '"+tpi+"')";
+            } else {
+                query = "CALL InsertarPuntaje('"+Cedula+"', '"+nivel+"', '"+puntos+"', '"+i1+"', '"+i2+"', '"+i3+"', '"+tpc+"', '"+tpi+"')";
+            }
+            
+            r = stmt.executeUpdate(query);
+            if(r>0){
+                return true;
+            }
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-       
-        return(null);
-    }
+        
+        return false;
+    } 
     
 }

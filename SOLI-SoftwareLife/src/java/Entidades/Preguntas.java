@@ -5,6 +5,7 @@
  */
 package Entidades;
 
+import Procesos.Conexion;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -155,7 +156,11 @@ public class Preguntas {
     private int Nivel;
     Connection cn;
     
-     public List<Preguntas> BuscarPreguntas(int nivel) throws SQLException{
+    public Preguntas(){
+        this.cn= new Conexion().OpenDb();
+    }
+    
+    public List<Preguntas> BuscarPreguntas(int nivel) throws SQLException{
         int cant;
         if(nivel==1){
             cant = 10;
@@ -165,12 +170,12 @@ public class Preguntas {
             cant = 15;
         }
         List<Preguntas> p = new ArrayList<>();
-        Preguntas P = new Preguntas();
         try{   
             Statement stmt = cn.createStatement();
-            String query = " SELECT * FROM cvid_pregunta WHERE nivel='"+nivel+"' ORDER BY rand() limit '"+cant+"'";
+            String query = " SELECT * FROM cvid_pregunta WHERE nivel='"+nivel+"' ORDER BY rand() limit "+cant;
             ResultSet result = stmt.executeQuery(query);
-            if(result.next()){
+            while(result.next()){
+                Preguntas P = new Preguntas();
                 P.setID_pregunta(result.getInt("ID_pregunta"));
                 P.setEnunciado(result.getString("Enunciado"));
                 P.setrCorrecta(result.getString("rCorrecta"));
@@ -182,24 +187,17 @@ public class Preguntas {
                 P.setNivel(result.getInt("nivel"));
                 
                 p.add(P);
-                return(p);
             } 
+            result.close();
+            stmt.close();
+            
+            return(p);
         }
         catch(Exception ex){
             System.out.println(ex.getMessage());
         }
-        P.setID_pregunta(0);
-        P.setEnunciado(null);
-        P.setrCorrecta(null);
-        P.setrIncorrecta1(null);
-        P.setrIncorrecta2(null);
-        P.setrIncorrecta3(null);
-        P.setRetroalimentacion(null);
-        P.setTipo(0);
-        P.setNivel(0);
-        p.add(P);
         
-        return p;
+        return null;
     } 
     
 }

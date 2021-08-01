@@ -11,65 +11,81 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Ranking</title>
-        <link rel="stylesheet" href="../Css/LoginPrincipal.css"/>
-        <!--<link rel="stylesheet" href="../Css/CSShumilde.css">-->
-        <link rel="stylesheet" href="../Css/ModoClaro.css"/>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Css/login.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     </head>
-    <body class="Fondo">
-        <header>    <!-- Encabezado -->
-            <h1 class="Titulo">SOLI<br>Software Life</h1>
-            <h2 class="Login">Menú Principal</h2>
-        </header>
-        <div>
-            <label for='dif'>Selecciona una dificultad</label>
-            <select name='dif'>
-                <optgroup>
-                    <option value='1'>Fácil</option>
-                    <option value='2'>Medio</option>
-                    <option value='3'>Difícil</option>
-                </optgroup>
-            </select>
-        </div>
-        <div>
+    <body >
+        <main>
+        <div class="contenedor">
+        <h1>Soli Software Life</h1>
+        <form action="../Controles/C_Login.jsp" method="post">
+            <div class="titulos">
+                <h3>Ranking General Por Dificultad</h3>
+                <h2 style="text-align: center">Está ordenado por nivel y puntaje</h2><br>
+            </div>
             
-            <table>
-                <caption>Ranking De Los Estudiantes</caption>
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Posición</th>
-                        <th>Cédula</th>
-                        <th>Nombre Completo</th>
-                        <th>Puntos</th>
+                        <th scope="col">Posición</th>
+                        <th scope="col">Cédula</th>
+                        <th scope="col">Nombre Completo</th>
+                        <th scope="col">Puntos</th>
+                        <th scope="col">Nivel</th>
                     </tr>
                 </thead>
                 <tbody>
             
             <%
+                String nivel="", pos2="Fácil";
+                int pos=0;
                 Ranking r = new Ranking();
                 List<Ranking> R = r.BuscarRanking();
                 for(Ranking ra: R){
+                    
+                if(ra.getNivel()==1){
+                    nivel="Fácil";
+                } else if(ra.getNivel()==2){
+                    nivel="Medio";
+                } else {
+                    nivel="Difícil";
+                }
+                
+                if(pos2.equals(nivel)){
+                    pos++;
+                } else {
+                    pos2=nivel;
+                    pos=1;
+                }
             %>
 
                     <tr>
-                        <td><%=ra.getPos()%></td>
+                        <th scope="row"><%=pos%></th>
                         <td><%=ra.getID_estudiante()%></td>
                         <td><%=ra.getNombre()+" "+ra.getApellido()%></td>
                         <td><%=ra.getPuntos()%></td>
+                        <td><%=nivel%></td>
                     </tr>
 
-            <%
+            <%  
                 }
             %>
                     
                 </tbody>
             </table>
+            </form>
         </div>
-            
         <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
             <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
             <a href="https://fisc.utp.ac.pa/"><img src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
         </footer>
+        </main>    
     </body>
 </html>
