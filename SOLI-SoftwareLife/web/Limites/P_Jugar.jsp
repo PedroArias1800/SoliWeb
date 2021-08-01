@@ -40,7 +40,9 @@
 
         %>
 
-        <p id="mod">Prueba - Nivel: <%=_nivel%></p><hr>
+        <div class="titulos">
+            <h3 id="mod">Prueba - Nivel: <%=_nivel%></h3><hr>
+        </div>
 
         <%
             List<Preguntas> PreguntaActual = (List<Preguntas>)session.getAttribute("PreguntaActual");
@@ -162,7 +164,7 @@
 
         %>
     
-        <h2 id="Retro" style="display: none;">Respuesta: <p id="corre"></p>
+        <h2 id="Retro" style="display: none;"><img src="" id="corre"  alt="" width="150" height="150">
             La respuesta era <%=pr.getrCorrecta()%>
         </h2>
  
@@ -171,7 +173,7 @@
  
         <form action="../Controles/C_Jugar.jsp" method="post">
             <input type="hidden" name="continuar" value="<%=enviar%>">
-            <label value="Puntos: "><input type="text" value="0" name="puntaje" id="pun"></label>
+            <label for="pun" value="Puntos: "></label><input type="text" value="0" name="puntaje" id="pun">
             <input type="submit" onclick="" value="Siguiente Pregunta" class="btn btn5" id="sig" disabled>
         </form>
  
@@ -190,10 +192,10 @@
                     $(function() {
                     $('#btn1, #btn2').on('click', function() {
  
-                        let era = "Incorrecto";
+                        let era = "../Imagenes/Incorrecto.gif";
  
                         if(this.getAttribute('value') === document.getElementById('resp').getAttribute('value')){
-                            era = "Correcta";
+                            era = ".../Imagenes/Correcto.gif";
                             document.getElementById('pun').value = 5;
                             document.getElementById('corre').innerHTML = era;
                         }
