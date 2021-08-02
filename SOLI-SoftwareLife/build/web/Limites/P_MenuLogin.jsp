@@ -39,7 +39,7 @@
                 </form>
            </div>
         </div>
-        <p style="text-align: center; margin-bottom: -4%;">
+        <p style="text-align: center; margin-bottom: 0%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <p>
@@ -61,7 +61,7 @@
            session.setAttribute("prA", 0);
            session.setAttribute("puntaje", 0);
         %>
-        <h2>Menu Principal</h2>
+        <h2 class='h2'>Menu Principal</h2>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
