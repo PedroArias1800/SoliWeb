@@ -24,15 +24,11 @@
     </head>
     <body>
         <header>  
-        <p style="text-align: center; margin-bottom: -4%;">
-            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
-        </p><!-- Encabezado -->
-        <p>
-            <button style="margin-top: -15%;" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+             <button style="" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <i class="fas fa-cog  fa-camera fa-3x"></i>
             </button>
         </p>
-        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%;">
+        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 79.6%; ">
             <div class="cc card-body">
             <Button  class="oscuro dark" id="dark">Modo Oscuro</Button>
                 <form action="../Controles/C_Login.jsp" method="post">
@@ -43,6 +39,11 @@
                 </form>
            </div>
         </div>
+        <p style="text-align: center; margin-bottom: -4%;">
+            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+        </p><!-- Encabezado -->
+        <p>
+          
         </header>
         <%
             int IDUsuario = 0;
