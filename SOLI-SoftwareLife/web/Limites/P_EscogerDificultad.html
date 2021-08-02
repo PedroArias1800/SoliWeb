@@ -19,14 +19,15 @@ and open the template in the editor.
     </head>
     <body>
         <main>
+        <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
+        <p style="text-align: center; margin-top: -3%;">
+            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+        </p>
         <div class="contenedor">
-            <p style="text-align: center; margin-bottom: -2%;">
-                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
-            </p>
             <form action="../Controles/C_Login.jsp" method="post">
                 <div style="margin-top: -2%; margin-bottom: 2%;">
                     <h3>Escoge La Dificultad</h3>
-                    <img class="dificultad" src="/img/op3.png" alt="" width="600" height="200"> 
+                    <img class="dificultad" src="../Imagenes/LogoJuego.png" alt="" width="600rem" height="300rem"> 
                     <h2 style="text-align: center">Presiona la dificultad con la que deseas empezar tu prueba para medir tus conocimientos acerca de los diferentes modelos del ciclo de vida del software!
                         Recuerda que si necesitas prepararte mejor o repasar los conceptos, puedes ingresar al apartado de infografía del menú principal.</h2>
                 
@@ -41,7 +42,7 @@ and open the template in the editor.
                 <form action="../Controles/C_TodasLasP.jsp" method="post">
                     <input class="Botones" type="button" value="Atrás" id="btn-4">
                     <input class="Botones" type="hidden" value="" name="nivel" id="diff">
-                    <input class="Botones" type="submit" value="Empezar Prueba">
+                    <input class="Botones" type="submit" value="Empezar Prueba" id="btn-5">
                 </form>
             </div>
         </div>
