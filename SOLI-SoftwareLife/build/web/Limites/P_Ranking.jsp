@@ -24,10 +24,8 @@
     <body >
         <main>
         <div class="contenedor">
-        <p style="text-align: center; margin-bottom: -2%;">
-            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
-        </p><!-- Encabezado -->
-        <form action="../Controles/C_Login.jsp" method="post" style="margin-bottom: 2%;">
+        <h1>Soli Software Life</h1>
+        <form action="../Controles/C_Login.jsp" method="post">
             <div class="titulos">
                 <h3>Ranking General Por Dificultad</h3>
                 <h2 style="text-align: center">Está ordenado por nivel y puntaje</h2><br>
@@ -91,7 +89,7 @@
             </div>
             <!-- Imágenes Con Enlaces De La UTP Y FISC -->
           
-        </footer><br>
+        </footer>
         </main> 
         <script src="../JavaScript/script.js"></script>
     </body>

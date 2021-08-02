@@ -173,12 +173,11 @@
         
         </form>
  
-        <form action="../Controles/C_Jugar.jsp" method="post" style="display: flex; justify-content: center;">
+        <form action="../Controles/C_Jugar.jsp" method="post" style="display: flex; justify-content: center; margin-bottom: 4%;">
             <input type="hidden" name="continuar" value="<%=enviar%>">
             <h2>Puntos Adquiridos:<input style="margin-left: 2%; padding-right: -70%;" type="text" value="0" name="puntaje" id="pun" readonly></h2>
             <input type="submit" onclick="" value="Siguiente Pregunta" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" id="sig" disabled>
         </form>
-        <br>
  
         <script>
                     $(function(){
