@@ -14,19 +14,18 @@ and open the template in the editor.
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-        <title>Registrarse</title>
+        <title>SOLI - Registrarse</title>
     </head>
     <body class="Fondo">
         <header>    <!-- Encabezado -->
             <h1 class="Titulo"><span>SOLI</span><br>Software Life</h1>
-            <h2 class="Registro">Registrarse</h2>
+            <h2 class="Login">Registrarse</h2>
         </header>
         <div>
             <form action="../Controles/C_Registrarse.jsp" method="post">  <!-- Obtener Datos Para El Inicio De Sesión -->
                 <input type="text" placeholder="Nombre" class="IniSec" name="Nombre" required/>
                 <input type="text" placeholder="Apellido" class="IniSec" name="Apellido" required><br>
-                
-              
+               
                 <input type="email" placeholder="Email" class="IniSec" name="Email" required/>
                 <input type="tel" placeholder="Cédula" class="IniSec" name="Cedula" required><br>
                 <input type="password" placeholder="Contraseña" class="IniSec" name="Contra1" required>
@@ -38,8 +37,10 @@ and open the template in the editor.
             </form>
         </div><br><br>
         <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
-            <a href="https://utp.ac.pa/"><img class="utp1" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.jpg" alt="" width="150" height="150"></a>
-            <a href="https://fisc.utp.ac.pa/"><img class="utp2"src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+            <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.jpg" alt="" width="150" height="150"></a>
+            <a href="https://fisc.utp.ac.pa/"><img src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
         </footer>
+        <script src="../JavaScript/script.js"></script>
+</main>
     </body>
 </html> 
