@@ -20,21 +20,24 @@ and open the template in the editor.
     <body>
         <main>
         <div class="contenedor">
-            <h1>Soli Software Life</h1>
+            <p style="text-align: center; margin-bottom: -2%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
             <form action="../Controles/C_Login.jsp" method="post">
-                <div class="titulos">
-
-                <h3>Escoger Dificultad</h3>
+                <div style="margin-top: -2%; margin-bottom: 2%;">
+                    <h3>Escoge La Dificultad</h3>
+                    <img class="dificultad" src="/img/op3.png" alt="" width="600" height="200"> 
+                    <h2 style="text-align: center">Presiona la dificultad con la que deseas empezar tu prueba para medir tus conocimientos acerca de los diferentes modelos del ciclo de vida del software!
+                        Recuerda que si necesitas prepararte mejor o repasar los conceptos, puedes ingresar al apartado de infografía del menú principal.</h2>
+                
                 </div>
-             <!--  <img class="dificultad" src="/img/op3.png" alt="" width="600" height="250">--> 
-                <p> Texto de prueba para la descripción rápida del módulo</p>
                 <div class="opciones">
                     <input type="button" name="facil" value="Facil" id="btn-1" >
                     <input type="button" name="medio" value="Medio" id="btn-2" >
                     <input type="button" name="dificil" value="Difícil"  id="btn-3" >
                 </div>
             </form>
-            <div style="display: none;" id="btn-4-5">
+            <div style="display: none; margin-top: -5%;" id="btn-4-5">
                 <form action="../Controles/C_TodasLasP.jsp" method="post">
                     <input class="Botones" type="button" value="Atrás" id="btn-4">
                     <input class="Botones" type="hidden" value="" name="nivel" id="diff">
@@ -66,6 +69,7 @@ and open the template in the editor.
             <!-- Imágenes Con Enlaces De La UTP Y FISC -->
           
         </footer>
+        <br>
         <script src="../JavaScript/script.js"></script>
     </body>
 </html>
