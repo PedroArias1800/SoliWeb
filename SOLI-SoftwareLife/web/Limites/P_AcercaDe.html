@@ -17,6 +17,7 @@ and open the template in the editor.
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     </head>
     <body>
         <audio src="../Sonidos/resum.mp3" autoplay loop></audio>
@@ -38,7 +39,7 @@ and open the template in the editor.
                     </div>
                     <div class="info-body card-body">
                         <h2>Información Adicional De SOLI: <input type="button" class="btn btn-secondary" id="blur"value="Click Aquí" onclick="toggle()"></h2>
-                        <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" id="blur2" value="Click Aquí"onclick="toggle2()"></h2>
+                        <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" id="blur2" value="Click Aquí" onclick="toggle2()"></h2>
                         <h2>Correo: <strong class="btn btn-link">soli.softwarelife@gmail.com</strong></h2>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ and open the template in the editor.
         </div>
         <div id="popup">
             <h2>Soli</h2>
-            <p>
+            <p class="ml12">
             "El videojuego SOLI es un juego interactivo que tiene como objetivo ilustrar a los estudiantes universitarios sobre el aprendizaje de un modelo de ciclo de vida donde se debe tener en cuenta, la importancia de sus etapas y roles necesarios para tener éxito."
             </p>
             <input type="button" class="btn btn-secondary" id="blur"value="Cerrar" onclick="toggle()">
@@ -69,7 +70,31 @@ and open the template in the editor.
             <input type="button" class="btn btn-secondar" id="blur2"value="Cerrar" onclick="toggle2()">
 
         </div>
-          
+        <<script>
+            // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 111100,
+    delay: (el, i) => 100 + 30 * i
+  });
+            
+            
+        </script>
             <script type="text/javascript">
             function toggle() {
                 var blur = document.getElementById('blur')
@@ -82,9 +107,9 @@ and open the template in the editor.
             <script type="text/javascript">
             function toggle2() {
                 var blur2 = document.getElementById('blur2')
-                blur2.classList.toggle2('active')
+                blur2.classList.toggle('active')
                 var popup2 = document.getElementById('popup2')
-                popup2.classList.toggle2('active')
+                popup2.classList.toggle('active')
             }
             </script>
 
