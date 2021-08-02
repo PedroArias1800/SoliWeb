@@ -13,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="../Css/login.css">
+        <link rel="stylesheet" href="../Css/validacion.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -22,8 +22,9 @@
     <body class="Fondo">
         <header>    <!-- Encabezado -->
         <div class="contenedor">
-            <h1>Soli Software Life</h1>
-            
+            <p style="text-align: center; margin-top: 1%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
             <form>
                     
                 <%  String Correo = request.getParameter("Correo");
@@ -50,7 +51,13 @@
 
                 <div class="form-group">
                   <h2 style="text-align: center;">Inicio de sesión exitoso</h2><br>
-                  <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal</strong> :)</h2>
+                 <div class="sk-folding-cube">
+                   <div class="sk-cube1 sk-cube"></div>
+                   <div class="sk-cube2 sk-cube"></div>
+                   <div class="sk-cube4 sk-cube"></div>
+                   <div class="sk-cube3 sk-cube"></div>
+                 </div>
+                  <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong> </h2>
                 </div>
                  
                  <%
@@ -68,6 +75,7 @@
 
                 <div class="form-group">
                   <h2 style="text-align: center;">Error al iniciar sesión</h2><br>
+      
                   <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong> :(</h2>
                 </div>
                 
@@ -88,10 +96,24 @@
 
                 <div class="form-group">
                     <h2 style="text-align: center;">Fue un placer</h2><br>
+                              <div class="sk-circle">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
                   <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong> :)</h2>
                 </div>
                 
-                <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>
+                <head><meta http-equiv="Refresh" content="1.5 ; URL=../Limites/P_Login.html"></head>
                 <%  }
                 %>
             </form>

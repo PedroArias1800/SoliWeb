@@ -24,13 +24,13 @@
     </head>
     <body>
         <header>  
-            <h1 class="h1">Soli Software Life</h1><!-- Encabezado -->
-           <p>
-    
-      
-        <button class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fas fa-cog  fa-camera fa-3x"></i>
-        </button>
+        <p style="text-align: center; margin-bottom: -4%;">
+            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+        </p><!-- Encabezado -->
+        <p>
+            <button style="margin-top: -15%;" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fas fa-cog  fa-camera fa-3x"></i>
+            </button>
         </p>
         <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%;">
             <div class="cc card-body">
@@ -60,7 +60,7 @@
            session.setAttribute("prA", 0);
            session.setAttribute("puntaje", 0);
         %>
-         <h2>Menu Principal</h2>
+        <h2>Menu Principal</h2>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
@@ -193,6 +193,14 @@
        
          
         <%  }  %>
+        <footer>   
+            <div class="contededor">
+                <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
+                <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+            </div>
+            <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+          
+        </footer>
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="../JavaScript/script.js"></script>
     </body>

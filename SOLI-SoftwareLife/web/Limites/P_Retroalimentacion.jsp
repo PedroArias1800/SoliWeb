@@ -27,7 +27,7 @@
             <div class="titulos">
                 <h3>Retroalimentación Del Intento</h3>
             </div>
-            <form style="margin-left: 35%;" id="retroa">
+            <form id="retroa">
         <%
             if((int)session.getAttribute("tipoUsuario")==3){
             Ranking r = new Ranking();
@@ -73,13 +73,14 @@
             
             if(resultados){     %>
                 
+            <div>
                 <h3>Estos son tus resultados:</h3><br><br>
                 <h2>Puntos Obtenidos: <%=puntos%></h2>
                 <h2>Intento: Nivel <%=_nivel%></h2>
                 <h2>Respuestas Correctas: <%=tpc%></h2>
                 <h2>Respuestas Incorrectas: <%=tpi%></h2>
                 <h2>Porcentaje De Efectividad: <%=porcentaje%>%</h2>
-                <img style="margin-left: -8%;" src="<%=imagen%>" alt="" width="500" height="150">
+                <img style="margin-left: 27%;" src="<%=imagen%>" alt="" width="500" height="150">
             
         <%
             }   else    {    %>
@@ -102,11 +103,12 @@
         
         <%  }     %>
             <div class="otros">
-              <button type="button" style="margin-left: 10%;" onclick="window.location.href='P_MenuLogin.jsp'" class="submit primary reg">Volver Al Menú Principal</button>
+              <button type="button" style="margin-left: 41%;" onclick="window.location.href='P_MenuLogin.jsp'" class="submit primary reg">Volver Al Menú Principal</button>
+            </div>
             </div>
             </form>
-        </div>
         <script src="../JavaScript/script.js"></script>
+        </div>
         </main>
     </body>
 </html>

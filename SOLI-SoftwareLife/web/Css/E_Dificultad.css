@@ -13,9 +13,18 @@ html {
       font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
-    background: rgb(238,174,202);
-background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-text-align: center;
+    
+    background: linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+
+    background: -moz-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+    
+    background: -webkit-linear-gradient(135deg, hsla(172, 85%, 74%, 1) 0%, hsla(319, 74%, 64%, 1) 100%);
+    
+    filter: progid DXImageTransform.Microsoft.gradient( startColorstr="#83F5E5", endColorstr="#E761BD", GradientType=1 );
+
+  }
+  main{
+      height: 100vh;
   }
 
   html h1{
@@ -35,7 +44,9 @@ text-align: center;
     
       
   }
- 
+  #btn-1.primary, #btn-2.primary, #btn-3.primary{
+    background: #5d2fdf;
+  }
   
   .enviar{
     margin-left: 45%;
@@ -48,7 +59,7 @@ text-align: center;
   
   }
  
-  .Botones.Ini, .oscuro{
+  #btn-1,#btn-2,#btn-3{
     margin-top: 1rem ;
    position: relative;
    overflow: hidden;
@@ -68,16 +79,16 @@ text-align: center;
    transition-property: background, box-shadow;
    transition-duration: 0.35s;
   }
-  .Botones.Ini:hover{
+   #btn-1:hover, #btn-2:hover, #btn-3:hover{
     background: #5526c5;
   }
-  .Botones.Ini:focus{
+ .submit:focus{
    box-shadow: 0 0 0 3px #8659e9;
  }
- .oscuro{
+ #btn-1, #btn-2, #btn-3{
    color: white;
   margin-left: 0%;
-  background: #5526c5;
+  background: #5d2fdf;
 }
 
   /**Globales**/
@@ -88,17 +99,11 @@ text-align: center;
     width: min(90%, 1290rem); /**lO MISMO QUE ARRIBA**/
     margin: 0 auto;
   }
- .regresar{
-margin-left: 2rem;
-margin-right: 90%;
-background: #252850;
-  }
-  .regresar:hover{
-  background: #5526c5;
-}
+
+
   form{
-    margin: 0 auto;
-    padding: 5rem 10rem 5rem 10rem; 
+    
+    padding: 5rem 5rem 5rem 20px; 
     margin-top: 2rems;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -106,25 +111,18 @@ background: #252850;
     -webkit-backdrop-filter: blur( 5.0px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: inline-block;
-  }
   
- label{
+  }
+.form-group label{
    font-size: 1.85rem;
 }
- input{
-     
-     text-align: center;
-     border: none;
+.form-group input{
   font-size: 1.4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 0.5rem;
-
 }
-
 ::placeholder {
-    margin-left: -5rem;
     font-size: 1em;
   }
   
@@ -141,26 +139,18 @@ background: #252850;
   .dark{
     margin-left: 90%;
   }
-
-  h2{
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-  
-  .IniSec{
-  margin: 1rem;
-  padding-right: 5rem;
-  
-  }
-
-  input.Botones.Ini{
- background-color: #252850;
-font-size: 1.25rem;
- border: 0;
- border-radius: 0.5rem;
-  }
- 
+.dificultad{
+    margin-left: 40%;
+    width: 20em;
+    height: 15em;
+}
+.opciones{
+    gap: 2rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 footer{
     padding-top: 1.5rem;
     background: rgba( 255, 255, 255, 0.25 );
@@ -183,3 +173,12 @@ footer .contededor{
     background-color: white;
     border-radius: 70px;
 }
+
+  body.darkmode{
+    background: rgb(2,0,36);
+    background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
+    color: white;
+  }
