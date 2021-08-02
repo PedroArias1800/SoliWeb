@@ -25,7 +25,7 @@
         <audio src="../Sonidos/resultado.mp3" autoplay loop></audio>
         <main>
         <div class="contenedor">
-            <div class="titulos">
+            <div class="titulos" style="margin-top: -7%;">
                 <h3 class='a3'>Retroalimentación Del Intento</h3>
             </div>
             <form id="retroa">

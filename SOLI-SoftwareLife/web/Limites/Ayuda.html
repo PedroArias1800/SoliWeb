@@ -15,7 +15,6 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
     <body>
-        <audio src="../Sonidos/resum.mp3" autoplay loop id="MusicaMenu"></audio>
         <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <header>    <!-- Encabezado -->
             <button type="button" onclick="window.location.href='P_EscogerDificultad.html'" class="submit regresar">Regresar</button>
@@ -48,8 +47,8 @@ and open the template in the editor.
 
     <footer>   
         <div class="contededor">
-            <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
-            <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+            <a href="https://utp.ac.pa/"><img  class="utp" src="../Imagenes/utp.png" alt="" width="150" height="150"></a>
+            <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="../Imagenes/fisc.png" alt="" width="150" height="150"></a>
         </div>
         <!-- Imágenes Con Enlaces De La UTP Y FISC -->
     </footer><br>
@@ -58,26 +57,10 @@ and open the template in the editor.
         $(function(){
             $('#btn-1, #btn-2').on('click',(function(){
             $('#btn-1, #btn-2, #vid1, #vid2').toggle(); 
-                pausar();
-                pausar2();
-                pausar3();
                 var au=document.getElementById('btnclick'); 
                 au.play();
             }));
         });
-        
-        function pausar(){
-            var au=document.getElementById('video1'); 
-            au.pause();
-        }
-        function pausar2(){
-            var au=document.getElementById('video2'); 
-            au.pause();
-        }
-        function pausar3(){
-            var au=document.getElementById('MusicaMenu'); 
-            au.pause();
-        }
         
     </script>
         <script src="../JavaScript/script.js"></script>

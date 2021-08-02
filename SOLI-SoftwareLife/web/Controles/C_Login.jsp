@@ -64,7 +64,7 @@
                     </div><br>
                     <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong></h2>
                 </div>
-                <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_MenuLogin.jsp"></head>
+                <head><meta http-equiv="Refresh" content="12 ; URL=../Limites/P_MenuLogin.jsp"></head>
                 <%  } else{ %>
                 
                 <div class="titulos">
@@ -82,7 +82,7 @@
                     <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong></h2>
                 </div>
                 
-                <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>                
+                <head><meta http-equiv="Refresh" content="12 ; URL=../Limites/P_Login.html"></head>                
                 <%    } 
                     }   
                   } else {
@@ -111,7 +111,7 @@
                     <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong></h2>
                 </div>
                 
-                <head><meta http-equiv="Refresh" content="1.5 ; URL=../Limites/P_Login.html"></head>
+                <head><meta http-equiv="Refresh" content="12 ; URL=../Limites/P_Login.html"></head>
                 <%  
                     session.removeAttribute("Nombre");
                     session.removeAttribute("Apellido");
