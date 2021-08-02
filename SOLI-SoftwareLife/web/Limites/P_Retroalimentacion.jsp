@@ -22,6 +22,7 @@
         <title>Retroalimentación</title>
     </head>
     <body>
+        <audio src="../Sonidos/resultado.mp3" autoplay loop></audio>
         <main>
         <div class="contenedor">
             <div class="titulos">

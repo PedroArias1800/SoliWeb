@@ -24,6 +24,7 @@
         <!--<link rel="stylesheet" href="../Css/LoginMenuPrincipal.css"/>-->
     </head>
     <body>
+        <audio src="../Sonidos/menumusic.mpeg" autoplay loop></audio>
         <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <header>  
         <p style="text-align: center; margin-bottom: -4%;">

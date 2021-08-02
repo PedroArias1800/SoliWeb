@@ -18,17 +18,20 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
     <body>
+        <audio src="../Sonidos/resultado.mp3" autoplay loop></audio>
         <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <main>
         <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
-        <p style="text-align: center; margin-top: -3%;">
+        <p style="text-align: center; margin-top: -3%; margin-bottom: -2%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p>
         <div class="contenedor">
             <form action="../Controles/C_Login.jsp" method="post">
                 <div style="margin-top: -2%; margin-bottom: 2%;">
-                    <h3>Escoge La Dificultad</h3>
-                    <img class="dificultad" src="../Imagenes/LogoJuego.png" alt="" width="600rem" height="300rem"> 
+                    <h3 style="margin-top: -3%; margin-bottom: 1%;">Escoge La Dificultad</h3>
+                    <p style="text-align: center">
+                        <img src="../Imagenes/LogoJuego.png" alt="" width="700rem" height="300rem"> 
+                    </p>
                     <h2 style="text-align: center">Presiona la dificultad con la que deseas empezar tu prueba para medir tus conocimientos acerca de los diferentes modelos del ciclo de vida del software!
                         Recuerda que si necesitas prepararte mejor o repasar los conceptos, puedes ingresar al apartado de infografía del menú principal.</h2>
                 
