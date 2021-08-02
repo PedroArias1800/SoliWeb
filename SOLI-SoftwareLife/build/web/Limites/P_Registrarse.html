@@ -16,15 +16,18 @@ and open the template in the editor.
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
         <title>SOLI - Registrarse</title>
     </head>
-    <body class="Fondo">
+    <body>
         <button class="oscuro regresar" type="button" onclick="window.location.href='P_Login.html'" class="submit regresar">Regresar</button>
-        <header>    <!-- Encabezado -->
-            <h1 class="Titulo"><span>SOLI</span><br>Software Life</h1>
-            <h2 class="Login">Registrarse</h2>
-        </header>
         
         <div class="contenedor">
+            <p style="text-align: center; margin-top: -4%; margin-bottom: -2%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
             <form action="../Controles/C_Registrarse.jsp" method="post">  <!-- Obtener Datos Para El Inicio De Sesión -->
+                <div style="margin-top: -6%; margin-bottom: 4%;">
+                    <h3>Registrarse</h3>
+                </div>
+                
                 <input type="text" placeholder="Nombre" class="IniSec" name="Nombre" required/>
                 <input type="text" placeholder="Apellido" class="IniSec" name="Apellido" required><br>
                
@@ -40,14 +43,13 @@ and open the template in the editor.
        
         <script src="../JavaScript/script.js"></script>
 
-        <footer>   
+        <footer style="margin-top: -2%;">   
             <div class="contededor">
                 <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
                 <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
             </div>
             <!-- Imágenes Con Enlaces De La UTP Y FISC -->
         </footer>
-        <script src="../JavaScript/script.js"></script>
-</main>
+        <br>
     </body>
 </html> 

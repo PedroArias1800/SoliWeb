@@ -24,11 +24,15 @@
     </head>
     <body>
         <header>  
-             <button style="" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fas fa-cog  fa-camera fa-3x"></i>
-            </button>
+        <p style="text-align: center; margin-bottom: -4%;">
+            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+        </p><!-- Encabezado -->
+        <p>
+        <button style="margin-top: -8%; position: absolute" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fas fa-cog  fa-camera fa-3x"></i>
+        </button>
         </p>
-        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 79.6%; ">
+        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%; margin-top: -7%;">
             <div class="cc card-body">
             <Button  class="oscuro dark" id="dark">Modo Oscuro</Button>
                 <form action="../Controles/C_Login.jsp" method="post">
@@ -61,7 +65,7 @@
            session.setAttribute("prA", 0);
            session.setAttribute("puntaje", 0);
         %>
-        <h2 class='h2'>Menu Principal</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu Principal</h2>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
