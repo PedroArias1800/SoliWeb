@@ -159,13 +159,11 @@
 
         %>
         <div id="Retro" style="position: absolute; display: none;">
-            <h2 style="margin-bottom: -4%; margin-top: -4%;">
-                <img style="margin-bottom: -8%;" src="../Imagenes/Incorrecto.gif" id="corre2" alt="" width="500" height="200" style="display: none"><br>
-                <img style="margin-bottom: -8%;" src="../Imagenes/Correcto.gif" id="corre1" alt="" width="500" height="200" style="display: none"><br>
-            </h2>
-            <h2>
-                La respuesta era: <%=pr.getrCorrecta()%>
-            </h2>
+            <p style="margin-bottom: -4%; margin-top: -4%;">
+                <img style="margin-bottom: -8%; margin-right: -35%;" src="../Imagenes/Incorrecto.gif" id="corre2" alt="" width="500" height="200" style="display: none"><br>
+                <img style="margin-bottom: -8%; margin-right: -35%;" src="../Imagenes/Correcto.gif" id="corre1" alt="" width="500" height="200" style="display: none"><br>
+            </p>
+            <h2 style="text-align: center">La respuesta era: <%=pr.getrCorrecta()%></h2>
         </div>
 
             <input type="hidden" value="<%=puntos%>" id="puntos">
@@ -173,11 +171,12 @@
         
         </form>
  
-        <form action="../Controles/C_Jugar.jsp" method="post" style="display: flex; justify-content: center; margin-bottom: 4%;">
+        <form action="../Controles/C_Jugar.jsp" method="post" style="display: flex; justify-content: center;">
             <input type="hidden" name="continuar" value="<%=enviar%>">
             <h2>Puntos Adquiridos:<input style="margin-left: 2%; padding-right: -70%;" type="text" value="0" name="puntaje" id="pun" readonly></h2>
             <input type="submit" onclick="" value="Siguiente Pregunta" style="font-size: 2rem; background-color: #131a43; color: white; border-radius: 5px; margin-left: 2%; margin-right: 5%;" id="sig" disabled>
         </form>
+        <br>
  
         <script>
                     $(function(){
