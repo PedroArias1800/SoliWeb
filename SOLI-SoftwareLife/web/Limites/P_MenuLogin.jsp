@@ -42,12 +42,7 @@
                     <Button type="submit" onclick="window.location.href='P_Login.html'" class="oscuro dark" id="dark">Cerrar Session</Button>
                 </form>
            </div>
-        </div>
-        <p style="text-align: center; margin-bottom: 0%;">
-            <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
-        </p><!-- Encabezado -->
-        <p>
-          
+        </div>          
         </header>
         <%
             int IDUsuario = 0;
@@ -129,7 +124,7 @@
               <%  }
             else if(IDUsuario==2){
         %>
-        <h2>Menu De Docentes</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu De Docentes</h2>
          <div class="container">
        <div class="card">
         <div class="face face1">
@@ -169,7 +164,7 @@
         <div class="face face2">
             <div class="content">
                 <h3>¿Quieres añadir nuevas preguntas? Este es el botón indicado! 📚</h3>
-                <a href="#" style='font-size: 2rem;'>Saber mas</a>
+                <a href="P_AdPregunta.jsp" style='font-size: 2rem;'>Saber mas</a>
             </div>
         </div>
     </div>
@@ -178,7 +173,7 @@
             }
             else{
         %>  
-        <h2>Menu De Administradores</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu De Administradores</h2>
          <div class="container">
         <div class="card ">
         <div class="face face1 ">

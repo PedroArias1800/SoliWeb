@@ -62,7 +62,7 @@
                         <div class="sk-cube4 sk-cube"></div>
                         <div class="sk-cube3 sk-cube"></div>
                     </div><br>
-                    <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong> </h2>
+                    <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong></h2>
                 </div>
                 <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_MenuLogin.jsp"></head>
                 <%  } else{ %>
@@ -79,7 +79,7 @@
                       <div class="sk-cube4 sk-cube"></div>
                       <div class="sk-cube3 sk-cube"></div>
                     </div><br>
-                    <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong> :(</h2>
+                    <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong></h2>
                 </div>
                 
                 <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>                
@@ -108,7 +108,7 @@
                         <div class="sk-circle11 sk-child"></div>
                         <div class="sk-circle12 sk-child"></div>
                     </div><br>
-                    <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong> :)</h2>
+                    <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong></h2>
                 </div>
                 
                 <head><meta http-equiv="Refresh" content="1.5 ; URL=../Limites/P_Login.html"></head>
