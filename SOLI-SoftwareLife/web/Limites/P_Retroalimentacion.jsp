@@ -25,7 +25,7 @@
         <main>
         <div class="contenedor">
             <div class="titulos">
-                <h3>Retroalimentación Del Intento</h3>
+                <h3 class='a3'>Retroalimentación Del Intento</h3>
             </div>
             <form id="retroa">
         <%
@@ -58,9 +58,9 @@
                 i3=3;
             }
             
-            if(porcentaje>=91){
+            if(porcentaje>=81){
                 imagen="../Imagenes/Excelente.gif";
-            } else if(porcentaje<91 && porcentaje>71){
+            } else if(porcentaje<81 && porcentaje>=50){
                 imagen="../Imagenes/Bien.gif";
             }
             
@@ -74,12 +74,12 @@
             if(resultados){     %>
                 
             <div>
-                <h3>Estos son tus resultados:</h3><br><br>
-                <h2>Puntos Obtenidos: <%=puntos%></h2>
-                <h2>Intento: Nivel <%=_nivel%></h2>
-                <h2>Respuestas Correctas: <%=tpc%></h2>
-                <h2>Respuestas Incorrectas: <%=tpi%></h2>
-                <h2>Porcentaje De Efectividad: <%=porcentaje%>%</h2>
+                <h3 class="ml3">Estos son tus resultados:</h3><br><br>
+                <h2 class="ml3">Puntos Obtenidos: <%=puntos%></h2>
+                <h2 class="ml3">Intento: Nivel <%=_nivel%></h2>
+                <h2 class="ml3">Respuestas Correctas: <%=tpc%></h2>
+                <h2 class="ml3">Respuestas Incorrectas: <%=tpi%></h2>
+                <h2 class="ml3">Porcentaje De Efectividad: <%=porcentaje%>%</h2>
                 <img style="margin-left: 27%;" src="<%=imagen%>" alt="" width="500" height="150">
             
         <%
@@ -98,8 +98,8 @@
 
         }   else {    %>
                 
-                <br><p>Esperamos que haya verificado todos los datos de la prueba<br><br>
-                Sus resultados no se guardarán en <strong>El Ranking</strong></p><br><br><br>
+        <h3>Esperamos que haya verificado todos los datos de la prueba</h3><br><br>
+        <h3>Sus resultados no se guardarán en <strong>El Ranking</strong></h3><br><br><br>
         
         <%  }     %>
             <div class="otros">
@@ -107,7 +107,8 @@
             </div>
             </div>
             </form>
-        <script src="../JavaScript/script.js"></script>
+         <script src="../JavaScript/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         </div>
         </main>
     </body>
