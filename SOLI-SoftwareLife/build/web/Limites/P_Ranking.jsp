@@ -24,6 +24,7 @@
     <body>
         <audio src="../Sonidos/resum.mp3" autoplay loop></audio>
         <main>
+            <button  type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit oscuro o1 regresar">Regresar</button>
         <div class="contenedor">
         <p style="text-align: center; margin-bottom: -2%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">

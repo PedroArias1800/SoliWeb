@@ -89,7 +89,7 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
  }
  .oscuro{
    color: white;
-  margin-left: 0%;
+  margin-left: 2%;
   background: #252850;
 }
 
@@ -150,6 +150,7 @@ footer .contededor{
     background-color: white;
     border-radius: 70px;
 }
+
   
   body.darkmode{
     background: rgb(2,0,36);
