@@ -12,38 +12,74 @@ and open the template in the editor.
         <link rel="stylesheet" href="../Css/infografia.css"/>
         <link rel="stylesheet" href="../Css/acercaDe.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
     <body>
-        <audio src="../Sonidos/resum.mp3" autoplay loop></audio>
+        <audio src="../Sonidos/resum.mp3" autoplay loop id="MusicaMenu"></audio>
+        <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <header>    <!-- Encabezado -->
-            <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
+            <button type="button" onclick="window.location.href='P_EscogerDificultad.html'" class="submit regresar">Regresar</button>
             <p style="text-align: center; margin-top: -4%; margin-bottom: -2%;">
                 <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
             </p>
-            <h2 class="Login">Infografia</h2>
+            <h2 style="margin-top: 1%; margin-bottom: -2%;">Ayuda</h2>
         </header>
         <div class="contenedor-main">
             <h2 style="font-size: 2.2rem; margin: 1rem auto;">En esta sección encontrarás videos que te servirán a relacionarte mejor con la aplicación multimedial</h2>
             <div class="contenedor">
-                <div class="cards text-center">
-                    <div class="contenedor-infog">
-                        <div class="card-header">
-                            <h2>Algunos videos de guía</h2>
+                <div class="cards text-center" id="vid1">
+                    <div class="contenedor-infog" style="padding-left: 50%; padding-right: 50%;">
+                        <div class="infog-body card-body" style="margin-left: -10rem;">
+                            <video src="../Video/Ayuda_Ranking.mp4" width="800" height="450" controls id="video1"></video>
                         </div>
-                        <div class="infog-body card-body">
-                            <video src="Ayuda_Ranking.mp4" controls></video>
+                    </div>
+                </div>
+                <div class="cards text-center" style="display: none;" id="vid2">
+                    <div class="contenedor-infog" style="padding-left: 50%; padding-right: 50%;">
+                        <div class="infog-body card-body" style="margin-left: -10rem;">
+                            <video src="../Video/Ayuda_Ranking.mp4" width="800" height="450" controls id="video2"></video>
                         </div>
                     </div>
                 </div>
             </div>
+            <button type="button" id="btn-1" class="submit regresar" style="margin-left: 80%; padding-left: 5%; padding-right: 5%; margin-top: -1%; margin-bottom: 1%;">Jugar</button>
+            <button type="button" id="btn-2" class="submit regresar" style="margin-left: 80%; padding-left: 5%; padding-right: 5%; margin-top: -1%; margin-bottom: 1%; display: none">Ranking</button>
         </div>
-        <footer>   
-            <div>
-                <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
-                <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
-            </div>
-            <!-- Imágenes Con Enlaces De La UTP Y FISC -->
-        </footer>
+
+    <footer>   
+        <div class="contededor">
+            <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
+            <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+        </div>
+        <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+    </footer><br>
+    <script>
+        
+        $(function(){
+            $('#btn-1, #btn-2').on('click',(function(){
+            $('#btn-1, #btn-2, #vid1, #vid2').toggle(); 
+                pausar();
+                pausar2();
+                pausar3();
+                var au=document.getElementById('btnclick'); 
+                au.play();
+            }));
+        });
+        
+        function pausar(){
+            var au=document.getElementById('video1'); 
+            au.pause();
+        }
+        function pausar2(){
+            var au=document.getElementById('video2'); 
+            au.pause();
+        }
+        function pausar3(){
+            var au=document.getElementById('MusicaMenu'); 
+            au.pause();
+        }
+        
+    </script>
         <script src="../JavaScript/script.js"></script>
     </body>
 </html>

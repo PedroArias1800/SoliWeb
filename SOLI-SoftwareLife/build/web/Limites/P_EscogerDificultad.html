@@ -22,7 +22,8 @@ and open the template in the editor.
         <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <main>
         <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
-        <p style="text-align: center; margin-top: -3%; margin-bottom: -2%;">
+        <button type="button" onclick="window.location.href='Ayuda.html'" class="submit regresar" style="margin-right: 0%; margin-left: 3%;">Ayuda</button>
+        <p style="text-align: center; margin-top: -4%; margin-bottom: -1.5%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p>
         <div class="contenedor">
@@ -42,12 +43,11 @@ and open the template in the editor.
                     <input type="button" name="dificil" value="Difícil"  id="btn-3" >
                 </div>
             </form>
-            <div class="btn45" style="display: none; margin-top: -8%;" id="btn-4-5">
+            <div class="btn45" style="display: none; margin-top: -8;" id="btn-4-5">
                 <form action="../Controles/C_TodasLasP.jsp" method="post">       
                     <input class="Botones oscuro" type="button" value="Atrás" id="btn-4">
                     <input class="Botones" type="hidden" value="" name="nivel" id="diff">
                     <input class="Botones oscuro" type="submit" value="Empezar Prueba" id="btn-5">
-                  
                 </form>
             </div>
         </div>

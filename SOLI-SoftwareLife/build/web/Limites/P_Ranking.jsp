@@ -26,7 +26,7 @@
         <main>
             <button  type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit oscuro o1 regresar">Regresar</button>
         <div class="contenedor">
-        <p style="text-align: center; margin-bottom: -2%;">
+        <p style="text-align: center; margin-bottom: -5%; margin-top: -3.5%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <form action="../Controles/C_Login.jsp" method="post" style="margin-bottom: 2%;">
