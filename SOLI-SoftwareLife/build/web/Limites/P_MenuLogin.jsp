@@ -28,11 +28,11 @@
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <p>
-            <button style="margin-top: -15%;" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <i class="fas fa-cog  fa-camera fa-3x"></i>
-            </button>
+        <button style="margin-top: -5%; position: absolute" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fas fa-cog  fa-camera fa-3x"></i>
+        </button>
         </p>
-        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%;">
+        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%; margin-top: -7%;">
             <div class="cc card-body">
             <Button  class="oscuro dark" id="dark">Modo Oscuro</Button>
                 <form action="../Controles/C_Login.jsp" method="post">
@@ -42,7 +42,7 @@
                     <Button type="submit" onclick="window.location.href='P_Login.html'" class="oscuro dark" id="dark">Cerrar Session</Button>
                 </form>
            </div>
-        </div>
+        </div>          
         </header>
         <%
             int IDUsuario = 0;
@@ -60,7 +60,7 @@
            session.setAttribute("prA", 0);
            session.setAttribute("puntaje", 0);
         %>
-        <h2>Menu Principal</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu Principal</h2>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
@@ -124,7 +124,7 @@
               <%  }
             else if(IDUsuario==2){
         %>
-        <h2>Menu De Docentes</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu De Docentes</h2>
          <div class="container">
        <div class="card">
         <div class="face face1">
@@ -164,7 +164,7 @@
         <div class="face face2">
             <div class="content">
                 <h3>¿Quieres añadir nuevas preguntas? Este es el botón indicado! 📚</h3>
-                <a href="#" style='font-size: 2rem;'>Saber mas</a>
+                <a href="P_AdPregunta.jsp" style='font-size: 2rem;'>Saber mas</a>
             </div>
         </div>
     </div>
@@ -173,7 +173,7 @@
             }
             else{
         %>  
-        <h2>Menu De Administradores</h2>
+        <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu De Administradores</h2>
          <div class="container">
         <div class="card ">
         <div class="face face1 ">

@@ -183,3 +183,12 @@ footer .contededor{
     background-color: white;
     border-radius: 70px;
 }
+
+.NP1, .NP2, .NP3, .NP4, .NP5, .NP6, .NP7, .NP8{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+::placeholder {
+    margin-left: 0rem;
+}

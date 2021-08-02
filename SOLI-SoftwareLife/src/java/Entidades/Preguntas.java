@@ -200,4 +200,54 @@ public class Preguntas {
         return null;
     } 
     
+    public List<Preguntas> BuscarTodasLasPreguntas() throws SQLException{
+        List<Preguntas> p = new ArrayList<>();
+        try{   
+            Statement stmt = cn.createStatement();
+            String query = "SELECT * FROM cvid_pregunta ORDER BY tipo ASC, nivel ASC";
+            ResultSet result = stmt.executeQuery(query);
+            while(result.next()){
+                Preguntas P = new Preguntas();
+                P.setID_pregunta(result.getInt("ID_pregunta"));
+                P.setEnunciado(result.getString("Enunciado"));
+                P.setrCorrecta(result.getString("rCorrecta"));
+                P.setrIncorrecta1(result.getString("rIncorrecta1"));
+                P.setrIncorrecta2(result.getString("rIncorrecta2"));
+                P.setrIncorrecta3(result.getString("rIncorrecta3"));
+                P.setRetroalimentacion(result.getString("Retroalimentacion"));
+                P.setTipo(result.getInt("tipo"));
+                P.setNivel(result.getInt("nivel"));
+                
+                p.add(P);
+            } 
+            result.close();
+            stmt.close();
+            
+            return(p);
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        
+        return null;
+    } 
+    
+    public boolean RegistrarPregunta(String e, String c, String i1, String i2, String i3, String r, int t, int n) throws SQLException{
+        try{   
+            int resultado;
+            Statement stmt = cn.createStatement();
+            String query = "INSERT INTO cvid_pregunta (Enunciado, rCorrecta, rIncorrecta1, rIncorrecta2, rIncorrecta3, Retroalimentacion, tipo, nivel)";
+            query += "VALUES ('"+e+"', '"+c+"', '"+i1+"', '"+i2+"', '"+i3+"', '"+r+"', '"+t+"', '"+n+"')";
+            resultado = stmt.executeUpdate(query);
+            if(resultado>0){
+                return true;
+            }
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        
+        return false;
+    } 
+    
 }

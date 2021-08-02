@@ -38,14 +38,14 @@
             
                 <h3>Registrarse</h3>
                 <br><p>Error: Las Contraseñas No Coinciden<br><br>
-                    Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong> :(</p><br><br><br>
+                    Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong></p><br><br><br>
                 <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Registrarse.html"></head>
            
            <%   } else if (!(Contra.equals(ContraDos)) && VengoDe!=0) {    %>
             
                 <h3>Registrarse</h3>
                 <br><p>Error: Las Contraseñas No Coinciden<br><br>
-                    Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong> :(</p><br><br><br>
+                    Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong></p><br><br><br>
                 <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_RegistrarseAdmin.html"></head>
            
            <%   } else if (Contra.equals(ContraDos) && VengoDe==0) {
@@ -61,7 +61,7 @@
             <%  } else { %>
             <h3>Registrarse</h3>
             <br><p>Error Al Crear El Usuario<br><br>
-                Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong> :(</p><br><br><br>
+                Vuelva A Intentarlo... <strong>Volviendo Al Registro Nuevamente</strong></p><br><br><br>
             <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>
             <%    } 
                 } else {
@@ -77,7 +77,7 @@
             <%  } else { %>
             <h3>Registrarse</h3>
             <br><p>Error Al Crear El Usuario<br><br>
-                Vuelva A Intentarlo... <strong>Volviendo Al Registro De Usuarios</strong> :(</p><br><br><br>
+                Vuelva A Intentarlo... <strong>Volviendo Al Registro De Usuarios</strong></p><br><br><br>
             <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_RegistrarseAdmin.jsp"></head>
             <%    }
                }
