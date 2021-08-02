@@ -163,7 +163,7 @@
                 <img style="margin-bottom: -8%;" src="../Imagenes/Incorrecto.gif" id="corre2" alt="" width="500" height="200" style="display: none"><br>
                 <img style="margin-bottom: -8%;" src="../Imagenes/Correcto.gif" id="corre1" alt="" width="500" height="200" style="display: none"><br>
             </h2>
-            <h2>
+            <h2 style="margin-top: 2rem;">
                 La respuesta era: <%=pr.getrCorrecta()%>
             </h2>
         </div>
