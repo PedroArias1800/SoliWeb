@@ -18,9 +18,10 @@ and open the template in the editor.
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     </head>
-    <body >
+    <body>
+        <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <div class="boton"></div>
-        <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
+        <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar" id="regresa">Regresar</button>
         <header>    <!-- Encabezado -->
             <p style="text-align: center; margin-top: -4%; margin-bottom: -2%;">
                 <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
@@ -35,8 +36,8 @@ and open the template in the editor.
                         <h2>Informacion</h2>
                     </div>
                     <div class="info-body card-body">
-                        <h2>Información Adicional De SOLI: <input type="button" class="btn btn-secondary" value="Click Aquí"></h2>
-                        <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" value="Click Aquí"></h2>
+                        <h2>Información Adicional De SOLI: <input type="button" class="btn btn-secondary" id="hclick" value="Click Aquí"></h2>
+                        <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" id="hclick" value="Click Aquí"></h2>
                         <h2>Correo: <strong class="btn btn-link">soli.softwarelife@gmail.com</strong></h2>
                     </div>
                 </div>
@@ -75,5 +76,15 @@ and open the template in the editor.
         <footer>    <!-- Imágenes Con Enlaces De La UTP Y FISC -->
         </footer>
         <script src="../JavaScript/script.js"></script>
+        <script>
+            
+            $(function(){
+                    $('#regresa, #hclick').on('click', function(){
+                        var au=document.getElementById('btnclick'); 
+                        au.play();         
+                    });
+            });
+            
+        </script>
     </body>
 </html>

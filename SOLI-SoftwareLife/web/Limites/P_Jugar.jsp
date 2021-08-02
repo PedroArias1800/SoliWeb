@@ -22,6 +22,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
+    <audio src="../Sonidos/bueno.mpeg" id="audioclick"></audio>
+    <audio src="../Sonidos/malo.mpeg" id="audioclick2"></audio>
     <main>
         <div class="contenedor">
         <%
@@ -120,7 +122,7 @@
                                 generarRespuestas[index] = pr.getrCorrecta();
                                 generarPuntos[index] = 5;
                             } else {
-                                generarRespuestas[index] = pr.getrIncorrecta3();
+                                generarRespuestas[index] = pr.getrIncorrecta1();
                                 generarPuntos[index] = 5;
                             }
                             aleatorios[index] = propuesto;
@@ -189,7 +191,7 @@
  
                     document.getElementById("Retro").style.display="flex";
                     detener();
-                    
+                                        
                     });
                     });
  
@@ -200,14 +202,18 @@
                             document.getElementById('pun').value = 5;
                             document.getElementById('corre1').style.display = "block";
                             document.getElementById("corre2").style.display="none";
+                            bueno();
                         }
                            else{
                             document.getElementById('pun').value = 0;
                             document.getElementById('corre2').style.display = "block";
                             document.getElementById("corre1").style.display="none";
+                            malo();
                         }
                         
                     detener();
+                    presionar(); 
+                    
                     });
                     });
  
@@ -232,14 +238,17 @@
                             document.getElementById('pun').value = 5;
                             document.getElementById('corre1').style.display = "block";
                             document.getElementById("corre2").style.display="none";
+                            bueno();
                         }
                            else{
                             document.getElementById('pun').value = 0;
                             document.getElementById('corre2').style.display = "block";
                             document.getElementById("corre1").style.display="none";
+                            malo();
                         }
                         
                     detener();
+                    
                     });
                     });
         </script>
@@ -290,11 +299,23 @@
                     document.getElementById("Retro").style.display="flex";
                     document.getElementById("corre2").style.display="block";
                     document.getElementById("corre1").style.display="none";
+                    
+                    malo();
                 }
             }, 1000);
             
             function detener(){
                 clearInterval(tiempo);
+            }
+            
+            function bueno() { 
+                var au=document.getElementById('audioclick'); 
+                au.play(); 
+            }
+            
+            function malo() { 
+                var au=document.getElementById('audioclick2'); 
+                au.play(); 
             }
 
         </script>

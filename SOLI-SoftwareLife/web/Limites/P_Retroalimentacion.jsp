@@ -58,9 +58,9 @@
                 i3=3;
             }
             
-            if(porcentaje>=91){
+            if(porcentaje>=81){
                 imagen="../Imagenes/Excelente.gif";
-            } else if(porcentaje<91 && porcentaje>71){
+            } else if(porcentaje<81 && porcentaje>=50){
                 imagen="../Imagenes/Bien.gif";
             }
             
@@ -98,8 +98,8 @@
 
         }   else {    %>
                 
-                <br><p>Esperamos que haya verificado todos los datos de la prueba<br><br>
-                Sus resultados no se guardarán en <strong>El Ranking</strong></p><br><br><br>
+        <h3>Esperamos que haya verificado todos los datos de la prueba</h3><br><br>
+        <h3>Sus resultados no se guardarán en <strong>El Ranking</strong></h3><br><br><br>
         
         <%  }     %>
             <div class="otros">

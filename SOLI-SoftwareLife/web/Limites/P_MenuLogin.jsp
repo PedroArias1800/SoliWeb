@@ -24,16 +24,17 @@
         <!--<link rel="stylesheet" href="../Css/LoginMenuPrincipal.css"/>-->
     </head>
     <body>
+        <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
         <header>  
         <p style="text-align: center; margin-bottom: -4%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <p>
-        <button style="margin-top: -5%; position: absolute" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button style="margin-top: -5%; position: absolute" class="btna" id="tuerca" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             <i class="fas fa-cog  fa-camera fa-3x"></i>
         </button>
         </p>
-        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 76%; margin-top: -7%;">
+        <div class="collapse submit" id="collapseExample" style="position: absolute; margin-left: 74%; margin-top: -7%;">
             <div class="cc card-body">
             <Button  class="oscuro dark" id="dark">Modo Oscuro</Button>
                 <form action="../Controles/C_Login.jsp" method="post">
@@ -54,12 +55,10 @@
             u.setType(IDUsuario);
             
             if(IDUsuario==3){ 
-        %>
-        
-        <% 
-           session.setAttribute("iniciar", 1); 
-           session.setAttribute("prA", 0);
-           session.setAttribute("puntaje", 0);
+                
+                session.setAttribute("iniciar", 1); 
+                session.setAttribute("prA", 0);
+                session.setAttribute("puntaje", 0);
         %>
         <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu Principal</h2>
             <div class="container">
@@ -73,7 +72,7 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>Pon a prueba tus conocimientos sobre los modelos de ciclo de vida del software ⚙</h3>
-                                <a href="P_EscogerDificultad.html" style='font-size: 2rem;'>Jugar</a>
+                                <a id="hclick" href="P_EscogerDificultad.html" style='font-size: 2rem;'>Jugar</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +86,7 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>¿Hiciste un buen intento?, Visita el ranking para observar tu posición! 🥇</h3>
-                                <a href="P_Ranking.jsp"style='font-size: 2rem;'>Ver Ranking</a>
+                                <a href="P_Ranking.jsp"style='font-size: 2rem;' id="hclick">Ver Ranking</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +100,7 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>Obten información del proyecto, sus desarrolladores y redes sociales! 🏼</h3>
-                                <a href="P_AcercaDe.html"style='font-size: 2rem;'>Saber mas</a>
+                                <a href="P_AcercaDe.html"style='font-size: 2rem;' id="hclick">Saber mas</a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +114,7 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>Aumenta tus conocimientos, prepárate para la prueba 📚</h3>
-                                <a href="P_Infografia.html" style='font-size: 2rem;'>Leer</a>
+                                <a href="P_Infografia.html" style='font-size: 2rem;' id="hclick">Leer</a>
                         </div>
                     </div>
                 </div>
@@ -124,6 +123,9 @@
 
               <%  }
             else if(IDUsuario==2){
+                session.setAttribute("iniciar", 1); 
+                session.setAttribute("prA", 0);
+                session.setAttribute("puntaje", 0);
         %>
         <h2 class='h2' style="margin-top: 2%; margin-bottom: -5%;">Menu De Docentes</h2>
          <div class="container">
@@ -194,6 +196,17 @@
        
          
         <%  }  %>
+        
+        <script>
+            
+            $(function(){
+                    $('#dark, #hclick, #tuerca').on('click', function(){
+                        var au=document.getElementById('btnclick'); 
+                        au.play();         
+                    });
+            });
+            
+        </script>
         <footer>   
             <div class="contededor">
                 <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>

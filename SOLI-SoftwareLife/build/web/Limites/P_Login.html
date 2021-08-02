@@ -13,6 +13,7 @@
 </head>
 <body>
     <audio id="audio" src="../Controles/music.mp3" autoplay loop controls ></audio>
+    <audio src="../Sonidos/click.mpeg" id="btnclick"></audio>
     <main>
    
         <div class="boton"></div>
@@ -37,15 +38,25 @@
               <input type="password" name="Password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
               <input type="hidden" value="0" name="vengoDe">
             </div>
-            <button  type="submit" class="submit enviar primary">Entrar</button>
+            <button  type="submit" class="submit enviar primary" id="hclick">Entrar</button>
             <div class="otros">
-              <button type="button" onclick="window.location.href='P_Registrarse.html'" class="submit primary reg">Registrarse </button>
-              <button type="button" onclick="window.location.href='P_RecuperarContrasena.html'" class="submit primary rec">Recuperar Contraseña</button>
+              <button type="button" onclick="window.location.href='P_Registrarse.html'" id="hclick" class="submit primary reg">Registrarse </button>
+              <button type="button" onclick="window.location.href='P_RecuperarContrasena.html'" id="hclick"class="submit primary rec">Recuperar Contraseña</button>
             </div>
         </form>
     </div>
     <script src="../JavaScript/script.js"></script>
-</main>
+    </main>
+    <script>
+            
+        $(function(){
+                $('#dark, #hclick').on('click', function(){
+                    var au=document.getElementById('btnclick'); 
+                    au.play();         
+                });
+        });
+
+    </script>
     <footer>   
         <div class="contededor">
             <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
