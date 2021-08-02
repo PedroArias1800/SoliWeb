@@ -50,27 +50,27 @@ and open the template in the editor.
             <p class="ml12">
             "El videojuego SOLI es un juego interactivo que tiene como objetivo ilustrar a los estudiantes universitarios sobre el aprendizaje de un modelo de ciclo de vida donde se debe tener en cuenta, la importancia de sus etapas y roles necesarios para tener éxito."
             </p>
-            <input type="button" class="btn btn-secondary" id="blur"value="Cerrar" onclick="toggle()">
+            <input type="button" class="btn btn-secondary miembro" id="blur"value="Cerrar" onclick="toggle()">
 
         </div>
 
         <div id="popup2">
-            <h2>Soli</h2>
+            <h2>Miembros de Soli</h2>
             <p>
-             YURY AGRAZAL
-            JORDAN ALVARADO" +
-                "\nEZEQUIEL AMAYA" +
-                "\nPEDRO ARIAS" +
-                "\nLUIS CEBALLOS" +
-                "\nDANIEL GÓMEZ" +
-                "\nJESÚS GUEVARA" +
-                "\nRAMSÉS MONTALVO" +
-                "\nAURELIO MORALES"
+            YURY AGRAZAL<br>
+            JORDAN ALVARADO<br>
+            EZEQUIEL AMAYA<br>
+            PEDRO ARIAS<br>
+            LUIS CEBALLOS<br>
+            DANIEL GÓMEZ<br>
+            JESÚS GUEVARA<br>
+            RAMSÉS MONTALVO<br>
+            AURELIO MORALES<br>
             </p>
-            <input type="button" class="btn btn-secondar" id="blur2"value="Cerrar" onclick="toggle2()">
+            <input type="button" class="btn btn-secondar miembro" id="blur2"value="Cerrar" onclick="toggle2()">
 
         </div>
-        <<script>
+        <script>
             // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml12');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
