@@ -81,7 +81,7 @@
                 <h2 class="ml3">Respuestas Correctas: <%=tpc%></h2>
                 <h2 class="ml3">Respuestas Incorrectas: <%=tpi%></h2>
                 <h2 class="ml3">Porcentaje De Efectividad: <%=porcentaje%>%</h2>
-                <img style="margin-left: 27%;" src="<%=imagen%>" alt="" width="500" height="150">
+                <img style="margin-left: 27%; margin-bottom: 3%; margin-top: 3%;" src="<%=imagen%>" alt="" width="500" height="150">
             
         <%
             }   else    {    %>

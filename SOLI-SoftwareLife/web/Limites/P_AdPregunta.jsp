@@ -22,8 +22,10 @@
     </head>
     <body >
         <main>
+        <audio src="../Sonidos/resum.mp3" autoplay loop></audio>
+        <button  type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit oscuro o1 regresar">Regresar</button>
         <div class="contenedor">
-        <p style="text-align: center; margin-bottom: -2%;">
+        <p style="text-align: center; margin-bottom: -4%; margin-top: -4%;">
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <form style="margin-bottom: 2%;">
@@ -44,8 +46,8 @@
                     <th scope="col">Incorrecta 2</th>
                     <th scope="col">Incorrecta 3</th>
                     <th scope="col">Retroalimentación</th>
-                    <th scope="col">Tipo</th>
                     <th scope="col">Nivel</th>
+                    <th scope="col">Tipo</th>
                 </tr>
             </thead>
             

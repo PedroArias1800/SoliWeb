@@ -24,7 +24,7 @@
 <body>
     <audio src="../Sonidos/bueno.mpeg" id="audioclick"></audio>
     <audio src="../Sonidos/malo.mpeg" id="audioclick2"></audio>
-    <audio src="../Sonidos/medio.mp3" id="musicp" autoplay></audio>
+    <audio src="../Sonidos/prueba.mp3" id="musicp" autoplay></audio>
     <main>
         <div class="contenedor">
         <%
