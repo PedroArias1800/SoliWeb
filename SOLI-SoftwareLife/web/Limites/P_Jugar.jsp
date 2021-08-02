@@ -24,6 +24,7 @@
 <body>
     <audio src="../Sonidos/bueno.mpeg" id="audioclick"></audio>
     <audio src="../Sonidos/malo.mpeg" id="audioclick2"></audio>
+    <audio src="../Sonidos/medio.mp3" id="musicp" autoplay></audio>
     <main>
         <div class="contenedor">
         <%
@@ -269,7 +270,7 @@
         </script>
 
         <script type="text/javascript">
-            var count = 3;
+            var count = 16;
 
             var tiempo = setInterval(function(){
                 count--;
@@ -286,8 +287,9 @@
                     if(count<10){
                         id.innerHTML = "0"+count;
                     }
-                }
+                }         
                 else{
+                    var repe=0;
                     document.getElementById("timer").style.color="red";
                     id.innerHTML = "00";
                     document.getElementById("sig").disabled = false;
@@ -300,12 +302,12 @@
                     document.getElementById("corre2").style.display="block";
                     document.getElementById("corre1").style.display="none";
                     
-                    malo();
                 }
             }, 1000);
             
             function detener(){
                 clearInterval(tiempo);
+                pausar();
             }
             
             function bueno() { 
@@ -316,6 +318,11 @@
             function malo() { 
                 var au=document.getElementById('audioclick2'); 
                 au.play(); 
+            }
+            
+            function pausar() { 
+                var au=document.getElementById('musicp'); 
+                au.pause(); 
             }
 
         </script>
