@@ -28,7 +28,7 @@
             <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
         </p><!-- Encabezado -->
         <p>
-        <button style="margin-top: -8%; position: absolute" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button style="margin-top: -5%; position: absolute" class="btna" type="" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             <i class="fas fa-cog  fa-camera fa-3x"></i>
         </button>
         </p>
