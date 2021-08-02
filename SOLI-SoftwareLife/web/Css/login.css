@@ -159,6 +159,9 @@ footer .contededor{
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
     color: white;
   }
+  .darkmode th,td{
+      color: white;
+  }
   .dark{
     margin-left: 90%;
   }
