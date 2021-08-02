@@ -50,14 +50,14 @@
                 </div>
 
                 <div class="form-group">
-                  <h2 style="text-align: center;">Inicio de sesión exitoso</h2><br>
-                 <div class="sk-folding-cube">
-                   <div class="sk-cube1 sk-cube"></div>
-                   <div class="sk-cube2 sk-cube"></div>
-                   <div class="sk-cube4 sk-cube"></div>
-                   <div class="sk-cube3 sk-cube"></div>
-                 </div>
-                  <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong> </h2>
+                    <h2 style="text-align: center;">Inicio de sesión exitoso</h2><br>
+                    <div class="sk-folding-cube">
+                        <div class="sk-cube1 sk-cube"></div>
+                        <div class="sk-cube2 sk-cube"></div>
+                        <div class="sk-cube4 sk-cube"></div>
+                        <div class="sk-cube3 sk-cube"></div>
+                    </div><br>
+                    <h2 style="text-align: center;">Redirigiendo al <strong>Menú Principal...</strong></h2>
                 </div>
                  
                  <%
@@ -74,9 +74,14 @@
                 </div>
 
                 <div class="form-group">
-                  <h2 style="text-align: center;">Error al iniciar sesión</h2><br>
-      
-                  <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong> :(</h2>
+                    <h2 style="text-align: center;">Error al iniciar sesión</h2><br>
+                    <div class="sk-folding-cube">
+                      <div class="sk-cube1 sk-cube"></div>
+                      <div class="sk-cube2 sk-cube"></div>
+                      <div class="sk-cube4 sk-cube"></div>
+                      <div class="sk-cube3 sk-cube"></div>
+                    </div><br>
+                    <h2 style="text-align: center;">Ah ocurrido un error, redirigiendo al <strong>Login Nuevamente</strong></h2>
                 </div>
                 
                 <head><meta http-equiv="Refresh" content="3 ; URL=../Limites/P_Login.html"></head>                
@@ -95,22 +100,22 @@
                 </div>
 
                 <div class="form-group">
-                    <h2 style="text-align: center;">Fue un placer</h2><br>
-                              <div class="sk-circle">
-  <div class="sk-circle1 sk-child"></div>
-  <div class="sk-circle2 sk-child"></div>
-  <div class="sk-circle3 sk-child"></div>
-  <div class="sk-circle4 sk-child"></div>
-  <div class="sk-circle5 sk-child"></div>
-  <div class="sk-circle6 sk-child"></div>
-  <div class="sk-circle7 sk-child"></div>
-  <div class="sk-circle8 sk-child"></div>
-  <div class="sk-circle9 sk-child"></div>
-  <div class="sk-circle10 sk-child"></div>
-  <div class="sk-circle11 sk-child"></div>
-  <div class="sk-circle12 sk-child"></div>
-</div>
-                  <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong> :)</h2>
+                    <h2 style="text-align: center;">Fue todo un placer, <%=session.getAttribute("Nombre")+" "+session.getAttribute("Apellido")%></h2><br>
+                    <div class="sk-circle">
+                        <div class="sk-circle1 sk-child"></div>
+                        <div class="sk-circle2 sk-child"></div>
+                        <div class="sk-circle3 sk-child"></div>
+                        <div class="sk-circle4 sk-child"></div>
+                        <div class="sk-circle5 sk-child"></div>
+                        <div class="sk-circle6 sk-child"></div>
+                        <div class="sk-circle7 sk-child"></div>
+                        <div class="sk-circle8 sk-child"></div>
+                        <div class="sk-circle9 sk-child"></div>
+                        <div class="sk-circle10 sk-child"></div>
+                        <div class="sk-circle11 sk-child"></div>
+                        <div class="sk-circle12 sk-child"></div>
+                    </div><br>
+                    <h2 style="text-align: center;">Esperamos que hayas aprendido mucho, <strong>Recuerda Visitarnos A Menudo</strong></h2>
                 </div>
                 
                 <head><meta http-equiv="Refresh" content="1.5 ; URL=../Limites/P_Login.html"></head>

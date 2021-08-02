@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="../Css/Registrarse.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+        <title>SOLI - Creando Pregunta</title>
+    </head>
+    <body>
+        <button class="oscuro regresar" type="button" onclick="window.location.href='P_AdPregunta.jsp'" class="submit regresar">Regresar</button>
+        
+        <div class="contenedor">
+            <p style="text-align: center; margin-top: -4%; margin-bottom: -2%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
+            <form action="../Controles/C_NuevaPregunta.jsp" method="post">  <!-- Obtener Datos Para El Inicio De Sesión -->
+                <div style="margin-top: -2%;">
+                    <h3>Recuperar Contraseña</h3>
+                    <h4 style="text-align: center; margin-top: 2%; font-size: large">
+                        Recuerde: Si su pregunta es "Cierto Y Falso", no es necesario llenar los siguientes campos:
+                        Incorrecta 2 y Incorrecta 3.
+                    </h4>
+                </div>
+                <select name="tipo" placeholder="Tipo" class="IniSec NP1" required>
+                    <optgroup>
+                        <option value="1">Cierto Y Falso</option>
+                        <option value="2">Mejor Respuesta</option>
+                    </optgroup>
+                </select>
+                <select name="nivel"  placeholder="Tipo" class="IniSec NP2" required>
+                    <optgroup>
+                        <option value="1">Fácil</option>
+                        <option value="2">Medio</option>
+                        <option value="3">Difícil</option>
+                    </optgroup>
+                </select><br>
+                <input type="text" placeholder="Enunciado" class="IniSec NP3" name="enunciado" required/>
+                <input type="text" placeholder="Retroalimentación" class="IniSec NP4" name="retroalimentacion" required><br>
+                <input type="text" placeholder="Correcta" class="IniSec NP5" name="correcto" required>
+                <input type="text" placeholder="Incorrecta 1" class="IniSec NP6" name="incorrecto1" required/><br>
+                <input type="text" placeholder="Incorrecta 2" class="IniSec NP7" name="incorrecto2">
+                <input type="text" placeholder="Incorrecta 3" class="IniSec NP8" name="incorrecto3"><br>
+                <input type="submit" class="Botones Ini" value="Crear Pregunta"><br>
+            </form>
+        </div><br><br>
+       
+        <script src="../JavaScript/script.js"></script>
+
+        <footer style="margin-top: -2%;">   
+            <div class="contededor">
+                <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
+                <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
+            </div>
+            <!-- Imágenes Con Enlaces De La UTP Y FISC -->
+        </footer>
+        <br>
+    </body>
+</html>
