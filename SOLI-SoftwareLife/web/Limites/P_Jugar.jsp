@@ -48,7 +48,7 @@
         
         <br>
         <h3 id="mod">Prueba - Nivel: <%=_nivel%></h3><hr>
-        <form style="align-content: center; padding-bottom: 20%; margin-bottom: 1.5%;">
+        <form style="align-content: center; padding-bottom: 18%; margin-bottom: 1.5%;">
 
         <%
             List<Preguntas> PreguntaActual = (List<Preguntas>)session.getAttribute("PreguntaActual");
@@ -158,12 +158,12 @@
             }
 
         %>
-        <div id="Retro" style="position: absolute; display: none;">
+        <div id="Retro" class="retro">
             <h2 style="margin-bottom: -4%; margin-top: -4%;">
                 <img style="margin-bottom: -8%;" src="../Imagenes/Incorrecto.gif" id="corre2" alt="" width="500" height="200" style="display: none"><br>
                 <img style="margin-bottom: -8%;" src="../Imagenes/Correcto.gif" id="corre1" alt="" width="500" height="200" style="display: none"><br>
             </h2>
-            <h2>
+            <h2 class="retro-resp">
                 La respuesta era: <%=pr.getrCorrecta()%>
             </h2>
         </div>
@@ -186,7 +186,7 @@
                     document.getElementById("btn1").disabled = true;
                     document.getElementById("btn2").disabled = true;
  
-                    document.getElementById("Retro").style.display="block";
+                    document.getElementById("Retro").style.display="flex";
                     detener();
                     
                     });
@@ -218,7 +218,7 @@
                     document.getElementById("btn3").disabled = true;
                     document.getElementById("btn4").disabled = true;
  
-                    document.getElementById("Retro").style.display="block";
+                    document.getElementById("Retro").style.display="flex";
  
                     });
                     });
@@ -286,7 +286,7 @@
                     document.getElementById("btn3").disabled = true;
                     document.getElementById("btn4").disabled = true;
 
-                    document.getElementById("Retro").style.display="block";
+                    document.getElementById("Retro").style.display="flex";
                     document.getElementById("corre2").style.display="block";
                     document.getElementById("corre1").style.display="none";
                 }

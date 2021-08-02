@@ -143,15 +143,33 @@ background: linear-gradient(27deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 1
 ::placeholder {
     font-size: 1em;
   }
+  
+.retro{
+    width: 98%;
+    position: absolute; 
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-  body.darkmode{
+.retro h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.retro-resp{
+    margin-top: 12rem;
+}
+
+body.darkmode{
     background: rgb(2,0,36);
     background: -moz-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     background: -webkit-radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 56%, rgba(7,23,26,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#07171a",GradientType=1);
-      color: white;
-  }
+    color: white;
+}
   .dark{
     margin-left: 90%;
   }

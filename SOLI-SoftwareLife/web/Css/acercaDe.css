@@ -33,10 +33,6 @@ header h2{
   text-align: end;
 }
 
-button.primary{
-  background: #252850;
-}
-
 .btn.btn-secondary{
   font-size: 1.3rem;
   background: #252850;
@@ -45,6 +41,7 @@ button.primary{
 .btn.btn-link{
   font-size: 1.8rem;
 }
+
 .btn.btn-outline-danger{
   font-size: 1.8rem;
   margin-left: auto;
@@ -92,10 +89,6 @@ button.primary{
   background: #252850;
 }
 
-.link{
-    font-size: 2rem;
-}
-
 /**Globales**/
 
 .contenedor {
@@ -134,6 +127,9 @@ button.primary{
 
 .cards{
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-header{
@@ -167,15 +163,6 @@ button.primary{
   justify-self: center;
 }
 
-.form-group label{
-font-size: 1.85rem;
-}
-.form-group input{
-  font-size: 1.4rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-radius: 0.5rem;
-}
 ::placeholder {
   font-size: 1em;
 }

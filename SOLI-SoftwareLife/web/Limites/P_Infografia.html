@@ -9,33 +9,44 @@ and open the template in the editor.
         <title>Infografia</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../Css/LoginPrincipal.css"/>
-        <link rel="stylesheet" href="../Css/ModoClaro.css"/>
-        <link rel="stylesheet" href="../Css/LoginMenuPrincipa"/>
+        <link rel="stylesheet" href="../Css/infografia.css"/>
+        <link rel="stylesheet" href="../Css/acercaDe.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
-    <body class="Fondo">
+    <body>
         <header>    <!-- Encabezado -->
-            <h1 class="Titulo">SOLI<br>Software Life</h1>
+            <button type="button" onclick="window.location.href='P_MenuLogin.jsp'" class="submit regresar">Regresar</button>
+            <p style="text-align: center; margin-top: -4%; margin-bottom: -2%;">
+                <img src="../Imagenes/Soli.png" alt="" width="400rem" height="200rem">
+            </p>
             <h2 class="Login">Infografia</h2>
         </header>
-        <div>
-            <h2 style="font-size: 2.2rem;">En esta sección encontrarás enlaces para aumentar tus conocimientos acerca de el ciclo de vida del software</h2>
-            <div>
-                <a href="https://www.youtube.com/watch?v=k8byUApEc4c"><input class="Botones Especial" type="button" value="Youtube - Primer Enlace"></a><br>
-                <a href="https://www.youtube.com/watch?v=b9U19JNQNYs"><input class="Botones Especial" type="button" value="Youtube - Segundo Enlace"></a><br>
-                <a href="http://flanagan.ugr.es/docencia/2005-2006/2/apuntes/ciclovida.pdf"><input class="Botones Especial" type="button" value="FLANGAN - Ciclo de vida del software"></a><br>
-                <a href="https://intelequia.com/blog/post/2083/ciclo-de-vida-del-software-todo-lo-que-necesitas-saber"><input class="Botones Especial" type="button" value="Powerdata"></a><br>
-                <a href="https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes#:~:text=Fase%20de%20planificaci%C3%B3n.,y%20designar%20roles%20y%20responsabilidades"><input class="Botones Especial" type="button" value="Intelequinia"></a><br>
+        <div class="contenedor-main">
+            <h2 style="font-size: 2.2rem; margin: 1rem auto;">En esta sección encontrarás enlaces para aumentar tus conocimientos acerca de el ciclo de vida del software</h2>
+            <div class="contenedor">
+                <div class="cards text-center">
+                    <div class="contenedor-infog">
+                        <div class="card-header">
+                            <h2>Enlaces</h2>
+                        </div>
+                        <div class="infog-body card-body">
+                            <a href="https://www.youtube.com/watch?v=k8byUApEc4c"><input class="btn btn-secondary btn-enlace" type="button" value="Youtube - Primer Enlace"></a><br>
+                            <a href="https://www.youtube.com/watch?v=b9U19JNQNYs"><input class="btn btn-secondary btn-enlace" type="button" value="Youtube - Segundo Enlace"></a><br>
+                            <a href="http://flanagan.ugr.es/docencia/2005-2006/2/apuntes/ciclovida.pdf"><input class="btn btn-secondary btn-enlace" type="button" value="FLANGAN - Ciclo de vida del software"></a><br>
+                            <a href="https://intelequia.com/blog/post/2083/ciclo-de-vida-del-software-todo-lo-que-necesitas-saber"><input class="btn btn-secondary btn-enlace" type="button" value="Powerdata"></a><br>
+                            <a href="https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes#:~:text=Fase%20de%20planificaci%C3%B3n.,y%20designar%20roles%20y%20responsabilidades"><input class="btn btn-secondary btn-enlace" type="button" value="Intelequinia"></a><br>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="P_MenuLogin.jsp"><input type="button" class="Botones" value="Regresar"></a>
         </div>
         <footer>   
-            <div class="contededor">
+            <div>
                 <a href="https://utp.ac.pa/"><img  class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="150" height="150"></a>
                 <a href="https://fisc.utp.ac.pa/"><img class="fisc" src="https://fisc.utp.ac.pa/sites/fisc.utp.ac.pa/files/documentos/2020/imagen/logo_en_contactenos.png" alt="" width="150" height="150"></a>
             </div>
             <!-- Imágenes Con Enlaces De La UTP Y FISC -->
-          
         </footer>
+        <script src="../JavaScript/script.js"></script>
     </body>
 </html>
