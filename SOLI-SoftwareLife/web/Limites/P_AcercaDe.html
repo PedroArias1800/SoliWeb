@@ -30,19 +30,69 @@ and open the template in the editor.
             <h2 class="Login">Acerca De</h2>
         </header>
         
-        <div class="contenedor">
+        <div class="contenedor" id="blur">
             <div class="cards text-center">
                 <div class="contenedor-info">
                     <div class="card-header">
                         <h2>Informacion</h2>
                     </div>
                     <div class="info-body card-body">
+<<<<<<< Updated upstream
                         <h2>Información Adicional De SOLI: <input type="button" class="btn btn-secondary" id="hclick" value="Click Aquí"></h2>
                         <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" id="hclick" value="Click Aquí"></h2>
+=======
+                        <h2>Información Adicional De SOLI: <input type="button" class="btn btn-secondary" id="blur"value="Click Aquí" onclick="toggle()"></h2>
+                        <h2>Equipo Desarrollador: <input type="button" class="btn btn-secondary" id="blur2" value="Click Aquí"onclick="toggle2()"></h2>
+>>>>>>> Stashed changes
                         <h2>Correo: <strong class="btn btn-link">soli.softwarelife@gmail.com</strong></h2>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="popup">
+            <h2>Soli</h2>
+            <p>
+            "El videojuego SOLI es un juego interactivo que tiene como objetivo ilustrar a los estudiantes universitarios sobre el aprendizaje de un modelo de ciclo de vida donde se debe tener en cuenta, la importancia de sus etapas y roles necesarios para tener éxito."
+            </p>
+            <input type="button" class="btn btn-secondary" id="blur"value="Cerrar" onclick="toggle()">
+
+        </div>
+
+        <div id="popup2">
+            <h2>Soli</h2>
+            <p>
+             YURY AGRAZAL
+            JORDAN ALVARADO" +
+                "\nEZEQUIEL AMAYA" +
+                "\nPEDRO ARIAS" +
+                "\nLUIS CEBALLOS" +
+                "\nDANIEL GÓMEZ" +
+                "\nJESÚS GUEVARA" +
+                "\nRAMSÉS MONTALVO" +
+                "\nAURELIO MORALES"
+            </p>
+            <input type="button" class="btn btn-secondar" id="blur2"value="Cerrar" onclick="toggle2()">
+
+        </div>
+          
+            <script type="text/javascript">
+            function toggle() {
+                var blur = document.getElementById('blur')
+                blur.classList.toggle('active')
+                var popup = document.getElementById('popup')
+                popup.classList.toggle('active')
+            }
+            </script>
+
+            <script type="text/javascript">
+            function toggle2() {
+                var blur2 = document.getElementById('blur2')
+                blur2.classList.toggle2('active')
+                var popup2 = document.getElementById('popup2')
+                popup2.classList.toggle2('active')
+            }
+            </script>
+
             <div class="cards text-center">
                 <div class="contenedor-redes">
                     <div class="card-header">
@@ -50,19 +100,19 @@ and open the template in the editor.
                     </div>
                     <a href="https://utp.ac.pa/"><img class="utp" src="https://utp.ac.pa/documentos/2015/imagen/logo_utp_1_72.png" alt="" width="100" height="100"></a>
                     <div class="redes-body card-body">
-                        <a href="https://www.youtube.com/">
+                        <a href="https://www.youtube.com/user/UTPPanama">
                         <button class="btn btn-outline-danger">
                             <img src="../Imagenes/y_logo.png">
                             Youtube
                         </button>
                         </a>
-                        <a href="https://www.facebook.com/">
+                        <a href="https://www.facebook.com/paginautp/">
                             <button class="btn btn-outline-danger">
                                 <img src="../Imagenes/f_logo.png">
                                 Facebook
                             </button>
                         </a>
-                        <a href="https://www.instagram.com/?hl=es">
+                        <a href="https://www.instagram.com/utppanama/?hl=en">
                             <button class="btn btn-outline-danger">
                                 <img src="../Imagenes/i_logo.png">
                                 Instagram

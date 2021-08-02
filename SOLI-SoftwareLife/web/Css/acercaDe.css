@@ -144,7 +144,7 @@ header h2{
   display: flex;
   flex-wrap:wrap;
   justify-content: space-evenly;
-  margin-top: 2.5rem;
+  margin-top: 5.5rem;
   margin-top: 2rems;
   background: rgba( 255, 255, 255, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -183,5 +183,117 @@ body.darkmode{
 .utp, .fisc{
   height: 8em;
   width: 8em;
+  background-color: white;
+  border-radius: 70px;
 }
+
+.btn .btn-secondary{
+  font-size: 1.3rem;
+  width: 10%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#252850;
+  transition: 0.5s;
+  padding: 2rem;
+  color: white;
+}
+
+.btn .btn-secondar{
+  font-size: 1.3rem;
+  width: 10%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#252850;
+  transition: 0.5s;
+  padding: 2rem;
+  color: white;
+}
+
+
+
+
+#blur.active{
+filter: blur(20px);
+pointer-events: none;
+user-select: none;
+}
+
+#popup{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgb(0, 0, 0,.30);
+  background: #fff;
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#popup.active
+{ 
+  top: 40%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+
+}
+
+#popup p{
+font-size: 1.50rem;
+}
+
+#popup h2
+{
+  font-size: 2.50zrem;
+  justify-content: center;
+  }
+
+  #blur2.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+    }
+    
+    #popup2{
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 600px;
+      padding: 50px;
+      box-shadow: 0 5px 30px rgb(0, 0, 0,.30);
+      background: #fff;
+      color: black;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    
+    #popup2.active
+    { 
+      top: 40%;
+      visibility: visible;
+      opacity: 1;
+      transition: 0.5s;
+    
+    }
+    
+    #popup2 p{
+    font-size: 1.50rem;
+    }
+    
+    #popup2 h2
+    {
+      font-size: 2.50zrem;
+      justify-content: center;
+      }
+    
 
