@@ -38,11 +38,11 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Posición</th>
-                        <th scope="col">Cédula</th>
-                        <th scope="col">Nombre Completo</th>
-                        <th scope="col">Puntos</th>
-                        <th scope="col">Nivel</th>
+                        <th class="cols"  scope="col">Posición</th>
+                        <th class="cols"  scope="col">Cédula</th>
+                        <th class="cols"  scope="col">Nombre Completo</th>
+                        <th class="cols"  scope="col">Puntos</th>
+                        <th class="cols"  scope="col">Nivel</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -71,11 +71,11 @@
             %>
 
                     <tr>
-                        <th scope="row"><%=pos%></th>
-                        <td><%=ra.getID_estudiante()%></td>
-                        <td><%=ra.getNombre()+" "+ra.getApellido()%></td>
-                        <td><%=ra.getPuntos()%></td>
-                        <td><%=nivel%></td>
+                        <th class="cols" scope="row"><%=pos%></th>
+                        <td class="td"><%=ra.getID_estudiante()%></td>
+                        <td class="td"><%=ra.getNombre()+" "+ra.getApellido()%></td>
+                        <td class="td"><%=ra.getPuntos()%></td>
+                        <td class="td"><%=nivel%></td>
                     </tr>
 
             <%  
